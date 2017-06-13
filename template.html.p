@@ -82,67 +82,19 @@ document.write('<link rel="stylesheet" type="text/css" media="all" href="/firefo
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 ◊; FIN : Teko + Dosis + 'Source Sans Pro' fonts.
 
+◊; FADE : Mathjax.
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+</script>
+◊; FIN : Mathjax.
+
+
 </head>
 
 ◊(define (empty-string) "")
-
-◊(define (tfl-font-template-body)
-    ◊body{
-      ◊style[#:type "text/css"]{
-        #tfl-fonts-nav {
-          top: 0;
-          width: 29rem;
-          margin-bottom: 2rem;
-          font-size: 90%;
-        }
-
-        #tfl-fonts-nav tr:first-child {
-          background: ◊|content-rule-color|;
-          ◊make-css-background-gradient[(list ◊|content-rule-color| "#777") '("17%" "100%")]
-          color: white;
-        }
-
-        #tfl-fonts-nav tr:first-child td {
-          padding: 0;
-          padding-top: 0.3em;
-          padding-bottom: 0.5em;
-        }
-
-        #tfl-fonts-nav tr + tr td {
-          padding: 0;
-        }
-
-        #tfl-fonts-nav tr + tr td .xref {
-            display: inline-block;
-            height: 100%;
-            width: 100%;
-            padding-top: 0.3em;
-            padding-bottom: 0.3em;
-            box-sizing: content-box;
-            background: none;
-        }
-
-        #content {
-          padding-top: 0;
-          padding-bottom: 2rem;
-          border-top: 0;
-        }
-      }
-
-      ◊div[#:id "content"]{
-        ◊table[#:id "tfl-fonts-nav"]{
-          ◊tr{◊td[#:colspan "4"]{◊xref["fonts.html"]{The TFL fonts — designed by Matthew Butterick}}}
-                ◊tr{
-                  ◊td{◊xref{Equity}}
-                  ◊td{◊xref{Concourse}}
-                  ◊td{◊xref{Triplicate}}
-                  ◊td{◊xref{Advocate}}}}
-
-        ◊doc}
-
-      })
-
-
 ◊(define (default-body)
     ◊body{  ◊; use this body for all other pages
       ◊div[#:id "content"]{
@@ -160,7 +112,7 @@ document.write('<link rel="stylesheet" type="text/css" media="all" href="/firefo
         (empty-string)
         ◊div[#:class "nav-outer" #:id "bottom"]{
             ◊div[#:class "nav-inner"]{
-              ◊span[#:id "toc"]{◊(if 'true ◊xref["/toc-alt.html"]{♕} "")}
+              ◊span[#:id "toc"]{◊(if 'true ◊xref["/index.html"]{♕} "")}
               ◊; FADE : adds dynamically generated parent link.
               ◊span[#:id "parent"]{◊(if parent-page ◊xref[parent-page]{♘} "")}
               ◊; FIN : adds dynamically generated parent link.

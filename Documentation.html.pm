@@ -1,10 +1,15 @@
 #lang pollen
 
-
+◊(define ($ . xs)
+  `(mathjax ,(apply string-append `("$" ,@xs "$"))))
+◊(define ($$ . xs)
+  `(mathjax ,(apply string-append `("$$" ,@xs "$$"))))
+(provide mathjax)
 
 
 ◊(define-meta title "Documentation")
 ◊hanging-topic[(topic-from-metas metas)]{06.07.17}
+
 
 
 ◊em{Italics}
@@ -173,10 +178,10 @@
 
 ◊(exclusion) ◊;----------
 
-◊xref{introduction}
+◊xref{2017-06-04}
 
 ◊highlight['racket]{
-∆xref{introduction}
+∆xref{2017-06-04}
 }
 
 ◊(exclusion) ◊;----------
@@ -225,6 +230,24 @@
 
 ◊highlight['racket]{
 ∆alternate-after-pdf["cows"]
+}
+
+◊(exclusion) ◊;----------
+
+This an inline equation : ◊${ \{x \in \mathbb{R} \mid a < x < b \} }.
+
+◊highlight['racket]{
+This an inline equation : ∆${ \{x \in \mathbb{R} \mid a < x < b \} }.
+}
+
+◊(exclusion) ◊;----------
+
+This is displayed mathematics.
+◊$${ \{x \in \mathbb{R} \mid a < x < b \} }
+
+◊highlight['racket]{
+This is displayed mathematics.
+∆$${ \{x \in \mathbb{R} \mid a < x < b \} }
 }
 
 ◊(exclusion) ◊;----------
