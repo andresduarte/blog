@@ -114,7 +114,7 @@ document.write('<link rel="stylesheet" type="text/css" media="all" href="/firefo
             ◊div[#:class "nav-inner"]{
               ◊span[#:id "toc"]{◊(if 'true ◊xref["/index.html"]{♕} "")}
               ◊; FADE : adds dynamically generated parent link.
-              ◊span[#:id "parent"]{◊(if parent-page ◊xref[parent-page]{♘} "")}
+              ◊; ◊span[#:id "parent"]{◊(if parent-page ◊xref[parent-page]{♘} "")}
               ◊; FIN : adds dynamically generated parent link.
               }})})
 

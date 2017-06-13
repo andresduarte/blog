@@ -920,6 +920,8 @@ Presented without docs or comment, as it should be obvious at this point what th
 
        (define exclusion (default-tag-function 'div #:class "exclusion"))
 
+       (define nobar (default-tag-function 'div #:class "nobar"))
+
        (define midbar (default-tag-function 'div #:class "midbar"))
 
        (define mono (default-tag-function 'span #:class "mono"))

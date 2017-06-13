@@ -206,10 +206,10 @@ h1, .home-link {
 
 .hanging-topic, .margin-note {
   position: absolute;
-  left: 2rem;
+  right: 2rem;
   width: 7rem;
-  float: left;
-  text-align: right;
+  float: right;
+  text-align: left;
 }
 
 .margin-note {
@@ -222,6 +222,8 @@ h1, .home-link {
 
 .topic {
   font-weight: bolder;
+  border-bottom: dashed 1px black;
+  padding-bottom: 6px;
   margin-top: 0.1rem;
   margin-bottom: 0.8rem;
   font-size: 110%;
@@ -268,7 +270,7 @@ body {
   color: #444;
 }
 
-◊(define body-left-margin "11rem")
+◊(define body-left-margin "4rem")
 
 body > * {
 font-size: 100%;
@@ -280,14 +282,14 @@ margin-right: ◊|default-margin|;
 ◊(define content-width "29rem")
 #content {
     width: ◊|content-width|;
-    padding: 3rem 0 8rem 0;
+    padding: 4rem 0 8rem 0;
 }
 
 
 
 
 #doc {
-  font-family: "charter";
+  font-family: "source sans pro";
   color: #222; ◊; Added this color, unsure about it's effect.
 }
 
@@ -435,6 +437,11 @@ sig:before {
 .exclusion {
   height: 0.2rem;
   border-bottom: 1px solid #DC702E;
+  margin-bottom: ◊|paragraph-space|;
+}
+
+.nobar {
+  height: 0.2rem;
   margin-bottom: ◊|paragraph-space|;
 }
 ◊; FIN : special omission.
@@ -819,6 +826,7 @@ margin-left: ◊(+ single-quote-width)em;
 
 #bottom a.xref:hover {
     background: #ffff;
+    color: #FF001F;
     opacity: 0.6;
     border-radius: 8px; ◊; Adds round edges.
     transition: background 0.2s;
@@ -862,6 +870,13 @@ div.pdf-thumbnail.centurion {
 
 .mcking {
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+.mcduke {
+  font-family: 'Source Sans Pro', sans-serif;
+  ◊(make-css-small-caps)
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .mcqueen:hover {
@@ -951,7 +966,7 @@ width: ◊|nav-width|;
 
 
 .nav-inner #toc {
-  padding-left: 23rem;
+
 }
 
 a.pdf, a.pdf:hover {

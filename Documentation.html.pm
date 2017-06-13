@@ -4,11 +4,14 @@
   `(mathjax ,(apply string-append `("$" ,@xs "$"))))
 ◊(define ($$ . xs)
   `(mathjax ,(apply string-append `("$$" ,@xs "$$"))))
-(provide mathjax)
+
+◊span[#:class "mcqueen"]{Documentation}
+◊span[#:class "mcduke"]{06.12.17}
 
 
-◊(define-meta title "Documentation")
-◊hanging-topic[(topic-from-metas metas)]{06.07.17}
+◊(nobar)
+
+◊;---------- START
 
 
 
