@@ -2,10 +2,10 @@
 @(require scribble/manual)
 @(require (for-label racket txexpr sugar pollen/decode pollen/tag hyphenate rackunit) scribble/eval pollen/scribblings/mb-tools)
 @(define my-eval (make-base-eval))
-@declare-exporting[pollen-tfl/pollen] 
+@declare-exporting[pollen-tfl/pollen]
 @(my-eval '(require txexpr sugar racket/list))
 
-@title[#:style manual-doc-style]{@filepath{pollen.rkt}} 
+@title[#:style manual-doc-style]{@filepath{pollen.rkt}}
 
 @(define lang @racket[#, @hash-lang[]])
 
@@ -222,7 +222,7 @@ If you don't use a rest argument, and pass multiple text arguments to your tag f
          (let* ([tx-elements (if (empty? tx-elements)
                                  (list url)
                                  tx-elements)]
-                [link-tx (txexpr 'a empty tx-elements)]        
+                [link-tx (txexpr 'a empty tx-elements)]
                 [link-tx (attr-set link-tx 'href url)])
            (if class-name
                (attr-set link-tx 'class class-name)
@@ -274,10 +274,10 @@ The difference here is that we're not providing a specific URL. Rather, we want 
 @chunk[<buy-book-link>
        (define (buy-book-link . tx-elements)
          (apply link buy-url tx-elements))
-       
+
        (define (buylink url . tx-elements)
          (apply link url #:class "buylink" tx-elements))
-       
+
        (define (home-link url . tx-elements)
          (apply link url #:class "home-link" tx-elements))]
 
@@ -359,7 +359,7 @@ It also makes it possible to change the fiddly HTML markup from one central loca
  (glyph
   [text string?])
  txexpr?]
-Create a span with the class @tt{glyph}. 
+Create a span with the class @tt{glyph}.
 
 Here, we'll use @racket[default-tag-function], which is an easy way to make a simple tag function. Any keywords passed in will be propagated to every use of the tag function.
 
@@ -375,9 +375,9 @@ Like @racket[image], but with some extra attributes.
 
 @chunk[<image-wrapped>
        (define (image-wrapped img-path)
-         (attr-set* (image img-path) 
-                    'class "icon" 
-                    'style "width: 120px;" 
+         (attr-set* (image img-path)
+                    'class "icon"
+                    'style "width: 120px;"
                     'align "left"))]
 
 @defproc[
@@ -406,7 +406,7 @@ Our list of elements could contain sequences like @racket['("\n" "\n" "\n")], wh
            (define list-item-separator-pattern (regexp "\n\n\n+"))
            (and (string? elem) (regexp-match list-item-separator-pattern elem)))
          (define list-of-li-elems (filter-split elems-merged list-item-break?))
-         (define list-of-li-paragraphs 
+         (define list-of-li-paragraphs
            (map (λ(li) (decode-paragraphs li #:force? #t)) list-of-li-elems))
          (define li-tag (default-tag-function 'li))
          (map (λ(lip) (apply li-tag lip)) list-of-li-paragraphs))]
@@ -508,18 +508,18 @@ Create a styled cross-reference link, with optional destination argument, so it 
 
 For this tag function, we'll assume that @racket[_target] is a single text argument, because that's how it will be used. But to be safe, we'll raise an error if we get too many arguments.
 
-What makes this function a little tricky is that @racket[_url] is optional, but if it appears, it appears first. That makes this a good job for @racket[case-lambda], which lets you define separate branches for your function depending on the number of arguments provided. 
+What makes this function a little tricky is that @racket[_url] is optional, but if it appears, it appears first. That makes this a good job for @racket[case-lambda], which lets you define separate branches for your function depending on the number of arguments provided.
 
 In the one-argument case, rather than duplicate the line of code in the two-argument case, we call the function again with a second argument.
 
 @chunk[<xref>
        (define xref
-         (case-lambda 
-           [(target) 
+         (case-lambda
+           [(target)
             (xref (target->url target) target)]
-           [(url target) 
+           [(url target)
             (apply attr-set* (link url target) 'class "xref" no-hyphens-attr)]
-           [more-than-two-args 
+           [more-than-two-args
             (apply raise-arity-error 'xref (list 1 2) more-than-two-args)]))]
 
 
@@ -551,7 +551,7 @@ Well, almost. One wrinkle that arises is connecting singular and plural versions
                 [x (string-replace x " " "-")]) ; replace word space with hyphen
            (format "~a.html" x)))
 
-       (define (target->url target)         
+       (define (target->url target)
          (define actual-filenames
            (map path->string (remove-duplicates (map ->output-path (directory-list (string->path "."))))))
          (define target-variants (let* ([plural-regex #rx"s$"]
@@ -591,7 +591,7 @@ argument to the function. With a function, we can't do that. But with a macro, w
 @chunk[<define-heading>
        (define-syntax-rule (define-heading heading-name tag)
          (define heading-name
-           (default-tag-function tag 
+           (default-tag-function tag
              #:class (symbol->string 'heading-name))))]
 
 ``Wait, why does @racket['heading-name] not produce the literal symbol @racket['heading-name]?'' The @racket['heading-name] syntax is just shorthand for @tt{(quote heading-name)}. Because this is a macro, the @racket[heading-name] inside this expression gets replaced with the value of the macro argument @racket[heading-name] before @racket[quote] is evaluated.
@@ -643,7 +643,7 @@ an identifier called @racket[topic-from-metas]. You can't do that with @racket[d
        (define-syntax (define-heading-from-metas stx)
          (syntax-case stx ()
            [(_ heading-name)
-            (with-syntax ([heading-from-metas 
+            (with-syntax ([heading-from-metas
                            (format-id stx "~a-from-metas" #'heading-name)])
               #'(define (heading-from-metas metas)
                   (heading-name (hash-ref metas meta-key-for-page-title))))]))]
@@ -677,6 +677,45 @@ Convert a topic + subhead into one HTML markup unit. Notice the use of @racket[n
          (txexpr 'div (list '(class "hanging-topic") no-hyphens-attr)
                  (list topic-xexpr (list* 'p (list no-hyphens-attr) tx-elements))))]
 
+FADE : repeat.
+
+ @defproc[
+  (slow-table
+   [table-rows xexpr?] ...)
+  txexpr?]
+ Make an HTML table using simplified notation. In HTML, wrapping every paragraph in <p> tags is a terrible and dull task. But formatting tables is even worse. This function lets you make simple tables using @litchar{|} to signify columns, and line breaks to signify rows.
+
+ @terminal{
+  ◊slow-table{
+   heading left | heading center | heading right
+   upper left | upper center | upper right
+   lower left | lower center | lower right}}
+
+ This function assumes that each row has the same number of columns. You could improve it to fill in blank cells in rows that need them.
+
+ The idea is to break down the input into table headings and cells, and then work back up, wrapping each layer in the appropriate tags.
+
+ @chunk[<slow-table>
+        (define (slow-table . tx-elements)
+          (define rows-of-text-cells
+            (let ([text-rows (filter-not whitespace? tx-elements)])
+              (for/list ([text-row (in-list text-rows)])
+                        (for/list ([text-cell (in-list (string-split text-row "|"))])
+                                  (string-trim text-cell)))))
+
+          (match-define (list tr-tag td-tag th-tag) (map default-tag-function '(tr td th)))
+
+          (define html-rows
+            (match-let ([(cons header-row other-rows) rows-of-text-cells])
+              (cons (map th-tag header-row)
+                    (for/list ([row (in-list other-rows)])
+                              (map td-tag row)))))
+
+          (cons 'table (for/list ([html-row (in-list html-rows)])
+                                 (apply tr-tag html-row))))]
+
+FIN : repeat.
+
 @defproc[
  (quick-table
   [table-rows xexpr?] ...)
@@ -699,16 +738,16 @@ The idea is to break down the input into table headings and cells, and then work
            (let ([text-rows (filter-not whitespace? tx-elements)])
              (for/list ([text-row (in-list text-rows)])
                        (for/list ([text-cell (in-list (string-split text-row "|"))])
-                                 (string-trim text-cell))))) 
-         
+                                 (string-trim text-cell)))))
+
          (match-define (list tr-tag td-tag th-tag) (map default-tag-function '(tr td th)))
-         
+
          (define html-rows
            (match-let ([(cons header-row other-rows) rows-of-text-cells])
              (cons (map th-tag header-row)
                    (for/list ([row (in-list other-rows)])
                              (map td-tag row)))))
-         
+
          (cons 'table (for/list ([html-row (in-list html-rows)])
                                 (apply tr-tag html-row))))]
 
@@ -727,7 +766,7 @@ One disadvantage of this approach is that the thumbnail will always be generated
 @chunk[<pdf-thumbnail>
        (define (pdf-thumbnail-link pdf-pathstring)
          (define img-extension "gif")
-         (define img-pathstring 
+         (define img-pathstring
            (->string (add-ext (remove-ext pdf-pathstring) img-extension)))
          (define sips-command
            (format "sips -Z 2000 -s format ~a --out '~a' '~a' > /dev/null"
@@ -749,32 +788,42 @@ One disadvantage of this approach is that the thumbnail will always be generated
  (alternate-after-pdf
   [base-name string?])
  txexpr?]
+                @defproc[
+(single-pdf
+  [base-name string?])
+txexpr?]
                )]
 A few convenience variants of @racket[pdf-thumbnail-link].
 
 @chunk[<pdf-thumbnail-variants>
        (define (pdf-thumbnail-link-from-metas metas)
-         (define-values (dir fn _) 
+         (define-values (dir fn _)
            (split-path (add-ext (remove-ext* (hash-ref metas 'here-path)) "pdf")))
          (pdf-thumbnail-link (->string fn)))
-       
+
        (define (before-and-after-pdfs base-name)
-         `(div 
+         `(div
            (div ((class "pdf-thumbnail"))
-                "before" (br)
-                ,(pdf-thumbnail-link 
+                "before"
+                (br)
+                ,(pdf-thumbnail-link
                   (format "pdf/sample-doc-~a-before.pdf" base-name)))
            (div ((class "pdf-thumbnail"))
                 "after" (br)
-                ,(pdf-thumbnail-link 
+                ,(pdf-thumbnail-link
                   (format "pdf/sample-doc-~a-after.pdf" base-name)))))
-       
+
        (define (alternate-after-pdf base-name)
          `(div ((class "pdf-thumbnail"))
-               "after (alternate)" 
+               "after (alternate)"
                (br)
-               ,(pdf-thumbnail-link 
-                 (format "pdf/sample-doc-~a-after-alternate.pdf" base-name))))]
+               ,(pdf-thumbnail-link
+                 (format "pdf/sample-doc-~a-after-alternate.pdf" base-name))))
+
+       (define (single-pdf base-name)
+         `(div ((class "pdf-thumbnail centurion"))
+               ,(pdf-thumbnail-link
+                 (format "pdf/~a.pdf" base-name))))]
 
 @defproc[
  (root
@@ -797,7 +846,7 @@ In this case, we'll use @racket[decode-elements] twice. First, we'll use it just
 
 @chunk[<root>
        (define (root . elems)
-         (define elements-with-paragraphs 
+         (define elements-with-paragraphs
            (decode-elements elems #:txexpr-elements-proc decode-paragraphs))
          (list* 'div '((id "doc"))
                 (decode-elements elements-with-paragraphs
@@ -868,32 +917,36 @@ Presented without docs or comment, as it should be obvious at this point what th
 
 @chunk[<misc-functions>
        (define omission (default-tag-function 'div #:class "omission"))
-       
+
+       (define exclusion (default-tag-function 'div #:class "exclusion"))
+
+       (define midbar (default-tag-function 'div #:class "midbar"))
+
        (define mono (default-tag-function 'span #:class "mono"))
-       
+
        (define font-details (default-tag-function 'div #:class "font-details"))
-       
+
        (define mb-font-specimen
          (default-tag-function 'div #:class "mb-font-specimen" #:contenteditable "true"))
-       
+
        (define (margin-note . xs)
          `(div ((class "margin-note") ,no-hyphens-attr) ,@xs))
-       
+
        (define os (default-tag-function 'span #:class "os"))
-       
+
        (define (gap [size 1.5])
          `(div ((style ,(format "height: ~arem" size)))))
-       
+
        (define (center . xs)
          `(div ((style "text-align:center")) ,@xs))
-       
+
        (define (indented #:hyphenate [hyphenate #t]  . xs)
          `(p ((class "indented"),@(if (not hyphenate) (list no-hyphens-attr) null)) ,@xs))
-       
+
        (define caption-runin (default-tag-function 'span #:class "caption-runin"))
-       
+
        (define caption (default-tag-function 'span #:class "caption"))
-       
+
        (define (captioned name . xs)
          `(table ((class "captioned indented"))
                  (tr (td ((style "text-align:left")) ,@xs) (td  ,(caption name)))))]
@@ -969,6 +1022,7 @@ This last incantation is needed so this @racketmodname[scribble/lp2] document kn
        <define-heading-from-metas>
        <headings-from-metas>
        <hanging-topic>
+       <slow-table>
        <quick-table>
        <pdf-thumbnail>
        <pdf-thumbnail-variants>

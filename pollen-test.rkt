@@ -23,34 +23,34 @@ will be combined into a single submodule.
 
 (module+ test
   (require rackunit txexpr "pollen.rkt") ;; always include this at the start of the test submodule
-  
+
   ;; We use `check-txexprs-equal?` rather than `check-equal?` because it's a little more lenient:
   ;; it allows the attributes of two txexprs to be in a different order,
   ;; yet still be considered equal (because ordering of attributes is not semantically significant).
   (check-txexprs-equal? (link "http://foo.com" "link text")
                         '(a ((href "http://foo.com")) "link text"))
-  
+
   ;; The last test was fine, but it can be even better if we use a Pollen-mode command on the left.
   ;; That way, we can directly compare the command as it appears in Pollen input
   ;; with how it appears in the output.
   (check-txexprs-equal? ◊link["http://foo.com"]{link text}
                         '(a ((href "http://foo.com")) "link text"))
-  
+
   ;; It's wise to test as many valid input situations as you can.
   (check-txexprs-equal? ◊link["http://foo.com" #:class 'main]{link text}
                         '(a ((href "http://foo.com")(class "main")) "link text"))
   (check-txexprs-equal? ◊link["http://foo.com"]
                         '(a ((href "http://foo.com")) "http://foo.com"))
-  
+
   ;; Strictly speaking, you could also write the last Pollen command like so:
   (check-txexprs-equal? ◊link{http://foo.com} '(a ((href "http://foo.com")) "http://foo.com"))
-  
+
   ;; That's not wrong. But in the interests of code readability,
   ;; I like to reserve the curly brackets in a Pollen command
   ;; for material that I expect to see displayed in the output
   ;; (e.g., textual and other content),
   ;; and use the square brackets for the other arguments.
-  
+
   ;; You can also check that errors arise when they should.
   ;; Note that when testing for exceptions, you need to wrap your test expression in a function
   ;; (so that its evaluation can be delayed, otherwise you'd get the error immediately.)
@@ -132,8 +132,8 @@ will be combined into a single submodule.
 
 (module+ test
   (check-txexprs-equal? ◊btw{foo
-                             
-                             
+
+
  bar}
                         '(ul ((class "btw"))
                              (div ((id "btw-title")) "by the way")

@@ -2,11 +2,12 @@
 
 ◊(require css-tools/column css-tools/core css-tools/transition)
 
-◊(make-media-query 23 11 1000 40)   
+◊(make-media-query 23 11 1000 40)
 
 ◊(define default-margin "2.5rem")
 ◊(define paragraph-space "0.8rem")
-◊(define anchor-hover-color "hsla(30, 20%, 90%, 1)")
+◊(define anchor-hover-color "#fbf3f3")
+◊; Modified color to pink-ish.
 * {
   padding: 0;
   margin: 0;
@@ -16,9 +17,38 @@
   box-sizing: border-box;
 }
 
+◊;FADE : adds red circle to ouside links
+div.margin-note a:after,
+p a:after {
+    position: relative;
+    content: "\FEFF°"; ◊; Red circle for exterior.
+    margin-left: 0.10em;
+    font-size: 90%;
+    top: -0.10em;
+    color: #933;}
+
+p a.xref:after,
+div.margin-note a.xref:after {
+    content: none;
+    }
+
+p a.xref {
+  content: none;
+  font-family: "charter SmCap BT"; ◊; Small caps for interior.
+  ◊(make-css-small-caps)
+}
+
+div.margin-note a.xref {
+  content: none;
+  font-family: 'Dosis', sans-serif; ◊; Different font for margin.
+  font-weight: 600;
+  ◊(make-css-small-caps)
+}
+◊;FIN : adds red circle to links
 
 p {
   line-height: 1.4;
+  font-size: 2px;
   margin-bottom: ◊|paragraph-space|;
 }
 
@@ -79,6 +109,14 @@ h1, .home-link {
  height: 100%;
  }
 
+ .home-overlay-inner ol {
+  padding: 0;
+  margin: 2rem;
+  margin-left: 3rem;
+  margin-right: 1.5rem;
+  height: 100%;
+  }
+
 .home-overlay-inner p {
   font-size: 85%;
   font-family: "concourse-t3";
@@ -108,35 +146,51 @@ h1, .home-link {
 }
 
 
-
+◊; FADE : Modified (border-top, font).
 .chapter {
-  font-family: "advocate-c43";
-  text-transform: uppercase;
+  display: block;
+  font-family: 'Teko', sans-serif;
   letter-spacing: 0.07rem;
-  margin-top: 2.5rem;
-  font-size: 2rem;
-  margin-bottom: 5rem;
-}
+  text-transform: uppercase;
+  font-size: 190%;
+  line-height: 1.1;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border-top: 1px solid black;
+  padding-top: 0.02em;
+  -moz-hyphens: none;
+  -webkit-hyphens: none;
+  -o-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;}
 
 .section {
-  font-family: "advocate-c43";
-  font-weight: normal;
-  font-size: 170%;
-  text-transform: uppercase;
+  display: block;
+  font-family: 'Teko', sans-serif;
   letter-spacing: 0.07rem;
-  margin-top: 2rem;
-  font-size: 1.7rem;
-  margin-bottom: 4rem;
-}
+  text-transform: uppercase;
+  font-size: 140%;
+  line-height: 1.1;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px dashed black;
+  padding-top: 0.02em;
+  -moz-hyphens: none;
+  -webkit-hyphens: none;
+  -o-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;}
+
+  ◊; FIN : Modified (border-top, font).
 
 .section + p:first-line {
   font-weight: bolder;
-  font-family: "equity-caps";
+  font-family: "charter SmCap BT"; ◊; Modified font.
   ◊(make-css-small-caps)
 }
 
 .font-headline {
-  font-family: "advocate-c43";
+  font-family: 'Teko', sans-serif;
   font-size: 180%;
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -159,11 +213,11 @@ h1, .home-link {
 }
 
 .margin-note {
-  font-size: 82%; 
-  margin-bottom: 1rem; ◊; prevents two asides from adjacency 
-  font-family: "concourse-t3";
+  font-size: 82%;
+  margin-bottom: 1rem; ◊; prevents two asides from adjacency
+  font-family: 'Dosis', sans-serif; ◊; Modified font.
   line-height: 1.35;
-  color: #666;
+  color: #667; ◊; Modified color.
 }
 
 .topic {
@@ -174,15 +228,22 @@ h1, .home-link {
   line-height: 1.1;
 }
 
-
 .hanging-topic p {
   font-style: italic;
   font-size: 95%;
   line-height: 1.2;
 }
 
+◊; FADE : adds top line.
+.hanging-topic {
+margin-bottom: 2em;
+border-top: solid 2px black;
+padding-top: 6px;
+}
+◊; FIN : adds top line.
+
 ~h2.section + p:first-line {
-  font-family: "equity-caps";
+  font-family: "charter SmCap BT"; ◊; modified font.
   font-weight: bolder;
   text-transform: lowercase;
   ◊make-css-ot-features['("c2sc") '(1)]
@@ -194,7 +255,7 @@ html {
 }
 
 body {
-  position: relative; ◊; this establishes body as reference container 
+  position: relative; ◊; this establishes body as reference container
   padding: 0;
   margin-left: auto;
   margin-right: auto;
@@ -219,14 +280,15 @@ margin-right: ◊|default-margin|;
 ◊(define content-width "29rem")
 #content {
     width: ◊|content-width|;
-    padding: 3rem 0 8rem 0; 
+    padding: 3rem 0 8rem 0;
 }
 
 
 
 
 #doc {
-  font-family: "equity-text";
+  font-family: "charter";
+  color: #222; ◊; Added this color, unsure about it's effect.
 }
 
 h2 {
@@ -241,19 +303,20 @@ em {
 a {
   text-decoration: none;
   color: inherit;
-  border-bottom: 1px dotted #aba3a3;
 }
 
 a:hover {
   background: ◊|anchor-hover-color|;
+  border-radius: 8px; ◊; Adds round edges.
 }
 
 a, a:hover {
   transition: background 0.2s;
 }
 
-.xref {
-  font-family: "equity-caps";
+a.xref {
+  content: none;
+  font-family: "charter SmCap BT";
   ◊(make-css-small-caps)
 }
 
@@ -344,7 +407,7 @@ sig {
   display: block;
   margin-top: 1.5rem;
   text-align: right;
-  font-family: "equity-caps";
+  font-family: "charter SmCap BT"; ◊; Modified font.
   ◊(make-css-small-caps)
 }
 
@@ -359,17 +422,67 @@ sig:before {
   margin-bottom: ◊|paragraph-space|;
 }
 
+.midbar{
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-bottom: 0.6em;
+  border-bottom: 1px solid gray;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+◊; FADE : special omission.
+.exclusion {
+  height: 0.2rem;
+  border-bottom: 1px solid #DC702E;
+  margin-bottom: ◊|paragraph-space|;
+}
+◊; FIN : special omission.
+
+p, li {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+ul li {
+    list-style: none;
+    margin-left: 1.35rem;
+    padding-left: 1.15rem; ◊; adds to 2.5rem, same as margin-left for ol li
+    margin-bottom: 0.7em;
+    font-size: 95%;
+}
+
+div#doc ul li:before {
+  font-family: "charter";
+  content: "•"; ◊; using concourse-t3-index, this will come out as an arrow
+  float:left;
+  margin-left: -2.5rem;
+  margin-top: 0.1rem;
+}
+
+div#doc div.toc ul li:before  {
+  content: none;
+
+}
+
+
+
 ol li {
 ◊; see firefox.css for an override of this value.
-margin-left: ◊|default-margin|; ◊; tweak this based on list-item font 
-padding-left: 0rem; 
-list-style-position: outside;
-font-family: "concourse-t3-index"; ◊; changes font for list indexes
-◊make-css-ot-features['("liga" "ss01") '(1 0)]
+margin-left: 1.35rem;
+padding-left: 1.15rem; ◊; adds to 2.5rem, same as margin-left for ol li
+margin-bottom: 0.7em;
+font-size: 95%;
+}
+
+ol li:before {
+float:left;
+margin-left: -2.5rem;
+margin-top: 0.1rem;
 }
 
 ol li p {
-  font-family: "equity-text"; ◊; changes font back for body of list item
+  font-family: "charter"; ◊; changes font back for body of list item
 }
 
 ul.btw {
@@ -379,14 +492,14 @@ ul.btw {
 #btw-title {
 display: block;
 text-align: center;
-font-family: "concourse-c6";
+font-family: '"concourse-c6"';
 font-size: 80%;
 ◊(make-css-caps)
 font-weight: bolder;
 letter-spacing: 2px;
 margin-bottom: 1em;
 padding-bottom: 0.6em;
-border-bottom: 4px double gray;
+border-bottom: 1px solid gray;
 margin-left: 35%;
 margin-right: 35%;
 }
@@ -394,13 +507,13 @@ margin-right: 35%;
 .btw li {
 list-style: none;
 margin-left: 1.35rem;
-padding-left: 1.15rem; ◊; adds to 2.5rem, same as margin-left for ol li 
+padding-left: 1.15rem; ◊; adds to 2.5rem, same as margin-left for ol li
 margin-bottom: 0.7em;
 font-size: 95%;
 }
 
 .btw li:before {
-font-family: "concourse-t3-index";
+font-family: "charter";
 content: "•"; ◊; using concourse-t3-index, this will come out as an arrow
 float:left;
 margin-left: -2.5rem;
@@ -409,7 +522,7 @@ margin-top: 0.1rem;
 
 
 .subhead {
-  font-family: "equity-caps";
+  font-family: "charter SmCap BT"; ◊; Modified font.
   font-weight: bolder;
   ◊(make-css-small-caps)
   margin-top: 1.2rem;
@@ -417,7 +530,7 @@ margin-top: 0.1rem;
 }
 
 .mono {
-  font-family: "triplicate-t4";
+  font-family: "Source Code Pro"; ◊; Modified font.
 }
 
 
@@ -432,8 +545,8 @@ margin-top: 0.1rem;
 
 .madlib {
   display: inline-block;
-  font-family: "concourse-c6";
-  font-size: 50%; 
+  font-family: "Source Sans Pro"; ◊; Modified font, effect in doubt.
+  font-size: 50%;
   font-weight: bolder;
   position: relative;
   top: 0.35rem;
@@ -446,11 +559,11 @@ margin-top: 0.1rem;
   padding-top: 0.5rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-  padding: 1rem 1rem 0.5rem 1rem; 
+  padding: 1rem 1rem 0.5rem 1rem;
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
   background: #f6f6f6;
-  font-family: "concourse-t3";
+  font-family: "Source Sans Pro"; ◊; Modified font, effect in doubt.
   line-height: 1.40;
 }
 
@@ -458,7 +571,7 @@ margin-top: 0.1rem;
     font-size: 80%;
 }
 
-table { ◊; basic table format, based on shortcut table 
+table { ◊; basic table format, based on shortcut table
 margin-bottom: 1.5em;
 border-collapse: collapse;
 width: 95%;
@@ -468,12 +581,12 @@ table a {
   border: 0;
 }
 
-◊; technique for getting inner borders only 
-tr + tr + tr { 
+◊; technique for getting inner borders only
+tr + tr + tr {
 border-top: 1px solid gray;
 }
-td + td { 
-border-left: 1px solid gray;
+td + td {
+
 }
 
 
@@ -488,7 +601,7 @@ text-align: center;
 }
 
 th {
-font-family: "concourse-c4";
+font-family: "Source Sans Pro"; ◊; Modified font, effect in doubt.
 font-weight: normal;
 text-transform: lowercase;
 font-size: 85%;
@@ -511,8 +624,8 @@ a.buylink, .buy-table td a {
     color: white;
     padding: 0.3em 0.5em 0.3em 0.5em;
     border-radius: 1em;
-    font-family: "concourse-t3";
-    ◊(make-css-caps);   
+    font-family: "Source Sans Pro"; ◊; Modified font, effect in doubt.
+    ◊(make-css-caps);
     letter-spacing: 0.04rem;
     border: none;
 }
@@ -569,7 +682,7 @@ margin-left: ◊(- double-quote-width)em;
 }
 
 dquo-push {
-margin-left: ◊(+ double-quote-width)em; 
+margin-left: ◊(+ double-quote-width)em;
 }
 
 squo, squo-pull {
@@ -583,10 +696,10 @@ margin-left: ◊(+ single-quote-width)em;
 ◊; hanging quotes don't work on right-aligned blocks
 .margin-note dquo-push, .margin-note squo-push {
   display: none;
-} 
+}
 .margin-note dquo-pull, .margin-note squo-pull {
   margin-left: inherit;
-} 
+}
 
 
 
@@ -600,14 +713,69 @@ margin-left: ◊(+ single-quote-width)em;
 ◊(define big-nav-width "8rem")
 
 
-#top-stripe {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  left: 2rem;
-  width: 38rem;
-  border-bottom: 0.2rem solid ◊|content-rule-color|;
+◊;FADE : blue side links.
+#prev .nav-inner,
+#next .nav-inner {
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 3.5rem; /* careful not to overlap the feedback links or code copy links */
+  font-family: concourse-t3;
+  color: rgba(0, 0, 0, 0);
+  -moz-transition-property: color;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -moz-transition-duration: 0.15s;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+
+  padding-top: 10rem;
+  -moz-transition-property: border-color;
+  -webkit-transition-property: border-color;
+  transition-property: border-color;
+  -moz-transition-duration: 0.15s;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
 }
+
+#prev .nav-inner {
+  border-left: 0.8rem solid white;
+}
+
+#next .nav-inner {
+    border-right: 0.8rem solid white;
+}
+
+#prev .nav-inner,
+#next .nav-inner {
+  background: none;
+  -moz-transition-property: border-color;
+  -webkit-transition-property: border-color;
+  transition-property: border-color;
+  -moz-transition-duration: 0.15s;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+}
+
+#prev .nav-inner:hover {
+  border-left-color: #f2f8fa;
+}
+
+#next .nav-inner:hover {
+  border-right-color: #f2f8fa;
+}
+
+#prev .nav-inner {
+  left: 0;
+  padding-left: 1rem;
+}
+
+#next .nav-inner {
+  right: 0;
+  padding-right: 1rem;
+}
+◊;FIN : blue side links.
 
 #prev .nav-inner,
 #next .nav-inner {
@@ -615,68 +783,52 @@ margin-left: ◊(+ single-quote-width)em;
 }
 
 
+
 #bottom .nav-inner {
-    border-top: 0.2rem solid ◊|content-rule-color|;
     opacity: 0.95;
     position: absolute;
-    left: 2rem;
-    width: 38rem;
+    height: 0.2rem;
+    margin-bottom: ◊|paragraph-space|;
+    margin-left: ◊|body-left-margin|;
+    margin-right: ◊|default-margin|;
+    width: ◊|content-width|;
 }
 
-#bottom a {
-  border-bottom: inherit;
-}
 
 
 
-#left a.xref:before {
-  content: "← ";
-}
-
-#right a.xref:after {
-  content: " →";
-}
 
 #bottom a.xref {
-  display: block;
+  display: inline-block;
   text-align: center;
+  left:60rem;
   box-sizing: content-box; ◊; must override border-box setting here
   padding: 0.4rem;
-  padding-bottom: 0.6rem;
+  padding-bottom: 2.5rem;
   height: 2rem;
+  width: 2rem;
   background: none;
   color: black;
   line-height: 1.1;
-  font-size: 85%;
-  opacity: 0.5; ◊; this works better than straight gray, which Webkit renders heavy
-  transition: opacity 0.2s;
+  font-size: 200%;
+  opacity: 0.1; ◊; this works better than straight gray, which Webkit renders heavy
+  transition: opacity 0.4s;
 }
 
-#bottom .span {
-  display: inline-block,
-  width: 12%;
-}
 
-#bottom span + span {
-  border-left: 1px solid gray;
-}
-
-#bottom #left,
-#bottom #right {
-  width: 32%;
-}
 
 #bottom a.xref:hover {
-      opacity: 1;
-}
+    background: #ffff;
+    opacity: 0.6;
+    border-radius: 8px; ◊; Adds round edges.
+    transition: background 0.2s;
+  }
 
-#bottom a.xref:hover, 
-#tfl-fonts-nav tr + tr td:hover {
-      ◊make-css-background-gradient[`("#ffffff" ,anchor-hover-color) '("17%" "100%") #:radial #t]
-}
+
+
 
 div.pdf-thumbnail {
-  font-family: "concourse-c6";
+  font-family: "Source Sans Pro";
   display: inline-block;
   width: 40%;
 }
@@ -685,6 +837,14 @@ div.pdf-thumbnail + div.pdf-thumbnail  {
   margin-left: 10%;
 }
 
+◊; FADE : aligns single-pdf in the center.
+div.pdf-thumbnail.centurion {
+  align-content: center;
+  align-items: center;
+  margin-left: 30%;
+}
+◊; FIN : aligns single-pdf in the center.
+
 
 .pdf-thumbnail a {
   display: inline-block;
@@ -692,6 +852,23 @@ div.pdf-thumbnail + div.pdf-thumbnail  {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+
+◊; FADE : alternative TOC.
+.mcqueen {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-bottom: 10px;
+  color: #FF001F;
+}
+
+.mcking {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.mcqueen:hover {
+  background-color: #FF001F;
+  color: #fff;
+}
+◊; FIN : alternative TOC.
 
 
 ◊; move the hover style onto the thumbnail so it's snug
@@ -773,8 +950,9 @@ width: ◊|nav-width|;
 }
 
 
-
-
+.nav-inner #toc {
+  padding-left: 23rem;
+}
 
 a.pdf, a.pdf:hover {
   border: none;
@@ -785,5 +963,103 @@ a.pdf img:hover {
   background: #f6f6f6;
 }
 
+◊; FADE : Everything Related to Code Blocks.
+
+◊(define default-horiz-block-metrics (format "
+    margin-left: ~arem;
+    width: ~arem;
+    margin-right: ~arem;" default-margin-left default-width default-margin-right))
 
 
+.highlight {
+    border-left: 1px dashed #ebebeb;
+    background: #F2F7FC;
+    margin-bottom: 1.2rem;
+}
+
+.highlight .linenos {
+    display: none;
+}
+
+
+◊; FADE : Styles code blocks.
+.highlight pre {
+    text-align: left;
+    font-family: Source Code Pro;
+    font-size: 0.75rem;
+    margin-right: -2rem;
+    white-space: pre-wrap;
+}
+◊; FADE : Styles code blocks.
+
+◊; syntax colors adapted from Racket documentation
+◊define[paren-color]{#888}
+◊define[comment-color]{#c2741f}
+◊define[keyword-color]{#07a}
+◊define[name-color]{#444}
+◊define[literal-color]{#275}
+
+◊; FADE : styling classes for Pygments.
+.p { color: ◊|paren-color|;}
+.c { color: #998; font-style: italic; } /* Comment */
+.err { color: red; font-style: italic; } /* Error */
+.o { color: #000; } /* Operator */
+.cm { color: ◊|comment-color|; font-style: italic } /* Comment.Multiline */
+.cp { color: ◊|comment-color|; font-style: italic } /* Comment.Preproc */
+.c1 { color: ◊|comment-color|; font-style: italic } /* Comment.Single */
+.cs { color: ◊|comment-color|; font-style: italic } /* Comment.Special */
+.gd { color: #000; background-color: #ffdddd } /* Generic.Deleted */
+.ge { color: #000; font-style: italic } /* Generic.Emph */
+.gr { color: #a00; } /* Generic.Error */
+.gh { color: #999; } /* Generic.Heading */
+.gi { color: #000; background-color: #ddffdd } /* Generic.Inserted */
+.go { color: #888; } /* Generic.Output */
+.gp { color: #555; } /* Generic.Prompt */
+.gs { } /* Generic.Strong */
+.gu { color: #aaa; } /* Generic.Subheading */
+.gt { color: #a00; } /* Generic.Traceback */
+.k { color: ◊|keyword-color|; } /* Keyword */
+.kc { color: ◊|keyword-color|; } /* Keyword.Constant */
+.kd { color: ◊|keyword-color|; } /* Keyword.Declaration */
+.kn { color: ◊|keyword-color|; } /* Keyword.Namespace */
+.kp { color: ◊|keyword-color|; } /* Keyword.Pseudo */
+.kr { color: ◊|keyword-color|; } /* Keyword.Reserved */
+.kt { color: ◊|keyword-color|; } /* Keyword.Type */
+.na { color: ◊|name-color|; } /* Name.Attribute */
+.nb { color: ◊|keyword-color|; } /* Name.Builtin */
+.nc { color: ◊|name-color|; } /* Name.Class */
+.no { color: ◊|name-color|; } /* Name.Constant */
+.nd { color: ◊|name-color|; } /* Name.Decorator */
+.ni { color: ◊|name-color|; } /* Name.Entity */
+.ne { color: ◊|name-color|; } /* Name.Exception */
+.nf { color: ◊|name-color|; } /* Name.Function */
+.nl { color: ◊|name-color|; } /* Name.Label */
+.nn { color: ◊|name-color|; } /* Name.Namespace */
+.nt { color: ◊|name-color|; } /* Name.Tag */
+.nv { color: ◊|name-color|; } /* Name.Variable */
+.ow { color: ◊|name-color|; } /* Operator.Word */
+.w { color: #bbb; } /* Text.Whitespace */
+.m { color: ◊|literal-color|; } /* Literal.Number */
+.mf { color: ◊|literal-color|; } /* Literal.Number.Float */
+.mh { color: ◊|literal-color|; } /* Literal.Number.Hex */
+.mi { color: ◊|literal-color|; } /* Literal.Number.Integer */
+.mo { color: ◊|literal-color|; } /* Literal.Number.Oct */
+.s { color: ◊|literal-color|;} /* Literal.String */
+.sb { color: ◊|literal-color|; } /* Literal.String.Backtick */
+.sc { color: ◊|literal-color|; } /* Literal.String.Char */
+.sd { color: ◊|literal-color|; } /* Literal.String.Doc */
+.s2 { color: ◊|literal-color|; } /* Literal.String.Double */
+.se { color: ◊|literal-color|; } /* Literal.String.Escape */
+.sh { color: ◊|literal-color|; } /* Literal.String.Heredoc */
+.si { color: ◊|literal-color|; } /* Literal.String.Interpol */
+.sx { color: ◊|literal-color|; } /* Literal.String.Other */
+.sr { color: ◊|literal-color|; } /* Literal.String.Regex */
+.s1 { color: ◊|literal-color|; } /* Literal.String.Single */
+.ss { color: ◊|literal-color|; } /* Literal.String.Symbol */
+.bp { color: #999; } /* Name.Builtin.Pseudo */
+.vc { color: #077; } /* Name.Variable.Class */
+.vg { color: #077; } /* Name.Variable.Global */
+.vi { color: #077; } /* Name.Variable.Instance */
+.il { color: #099; } /* Literal.Number.Integer.Long */
+◊; FIN: styling classes for Pygments.
+◊; FIN : Everything Related to Code Blocks.

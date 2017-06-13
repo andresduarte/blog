@@ -7,12 +7,14 @@
 
 ◊(define (make-side-nav id url text)
   ◊div[#:class "nav-outer" #:id id]{◊(link (or url "") ◊div[#:class "nav-inner"]{◊div[#:class "nav-flex" text]})})
+
+
 ◊(define center-cell-width 14)
 ◊(define side-cell-width (/ (- 100 (+ 10 (* center-cell-width 2))) 2))
 ◊(local-require pollen/tag)
-◊; the name `link` is already defined as a function that makes hyperlinks, 
+◊; the name `link` is already defined as a function that makes hyperlinks,
 ◊; so we use `make-default-tag-function` to make a literal `link` tag
-◊(define literal-link (make-default-tag-function 'link)) 
+◊(define literal-link (make-default-tag-function 'link))
 ◊(define (make-subnav children)
   (apply ul #:class "subnav"
     (for/list ([child (in-list children)])
@@ -74,12 +76,17 @@ document.write('<link rel="stylesheet" type="text/css" media="all" href="/firefo
 
 </script>
 
+◊; FADE : Teko + Dosis + 'Source Sans Pro' fonts.
+<link href="https://fonts.googleapis.com/css?family=Dosis|Teko" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Dosis:600" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+◊; FIN : Teko + Dosis + 'Source Sans Pro' fonts.
 
 </head>
 
 ◊(define (empty-string) "")
 
-◊(define (tfl-font-template-body) 
+◊(define (tfl-font-template-body)
     ◊body{
       ◊style[#:type "text/css"]{
         #tfl-fonts-nav {
@@ -121,7 +128,7 @@ document.write('<link rel="stylesheet" type="text/css" media="all" href="/firefo
           border-top: 0;
         }
       }
-    
+
       ◊div[#:id "content"]{
         ◊table[#:id "tfl-fonts-nav"]{
           ◊tr{◊td[#:colspan "4"]{◊xref["fonts.html"]{The TFL fonts — designed by Matthew Butterick}}}
@@ -133,44 +140,40 @@ document.write('<link rel="stylesheet" type="text/css" media="all" href="/firefo
 
         ◊doc}
 
-      ◊if[(not toolbar?) ""]{
-        ◊div[#:class "nav-outer" #:id "bottom"]{
-            ◊div[#:class "nav-inner"]{
-                  ◊span[#:style "width:33%"]{◊xref["/index.html"]{TFL home}}
-                  ◊span[#:style "width:34%"]{◊xref["/toc.html"]{Read excerpts}}
-                  ◊span[#:style "width:33%"]{◊xref[buy-url]{get the book}}}}}})
+      })
 
 
 ◊(define (default-body)
     ◊body{  ◊; use this body for all other pages
-      ◊div[#:id "top-stripe"]{}
       ◊div[#:id "content"]{
         ◊doc
         ◊(gap 1)
-        ◊(make-subnav (or (children here) null))}
+        ◊div[#:id "top-stripe"]{}
+        ◊(make-subnav (or (children here) null))
+        }
 
       ◊(if previous-page ◊make-side-nav["prev" previous-page]{<} "")
       ◊(if next-page ◊make-side-nav["next" next-page]{>} "")
 
       ◊;<!-- bottom nav -->
-      ◊(if (not toolbar?) 
+      ◊(if (not toolbar?)
         (empty-string)
         ◊div[#:class "nav-outer" #:id "bottom"]{
             ◊div[#:class "nav-inner"]{
-                  ◊span[#:id "left"]{◊(if (eq? here 'toc.html)
-                    ◊xref["index.html"]{home} 
-                    ◊xref{◊(select 'title previous-page)})}
-                    ◊span{◊xref["/index.html"]{TFL home}}
-                    ◊span{◊xref[buy-url]{get the book}}
-                    ◊span{◊xref["/fonts.html"]{get the fonts}}
-                    ◊span[#:id "right"]{◊(if next-page ◊xref{◊(select 'title next-page)} ◊xref["https://www.google.com/search?q=boxer+puppies&safe=off&tbm=isch"]{boxer puppies})}}})})
+              ◊span[#:id "toc"]{◊(if 'true ◊xref["/toc-alt.html"]{♕} "")}
+              ◊; FADE : adds dynamically generated parent link.
+              ◊span[#:id "parent"]{◊(if parent-page ◊xref[parent-page]{♘} "")}
+              ◊; FIN : adds dynamically generated parent link.
+              }})})
+
+
 
 ◊(->html
-    (body 
+    (body
         (if (select-from-metas 'tfl-font-template metas)
             (tfl-font-template-body)
             (default-body))))
-                      
+
 
 </html>
 <!-- © 2008–2017 Matthew Butterick · website made with Pollen (pollenpub.com) -->

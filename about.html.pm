@@ -1,6 +1,6 @@
 #lang pollen
 
-◊(define-meta title "about the author")
+◊(define-meta title "about")
 ◊(section-from-metas metas)
 
 
@@ -10,7 +10,7 @@
 
 My other projects include Practical Typography, an online book (◊link{http://practicaltypography.com}), the fonts ◊xref{Equity}, ◊xref{Concourse}, ◊xref{Triplicate}, and ◊xref{Advocate}, and Pollen, software for publishing electronic books (◊link{http://pollenpub.com}).
 
-I live in Los Angeles with my wife Jessica and Roxy the boxer. 
+I live in Los Angeles with my wife Jessica and Roxy the boxer.
 
 You can reach me at ◊link["mailto:mb@typographyforlawyers.com"]{mb@typographyforlawyers.com}. I welcome comments and corrections. I do not, however, dispense individualized critiques or recommendations. Nor do I have Word templates to give away. After all, the point of the book is for you to learn how to do these things yourself.
 
@@ -39,5 +39,3 @@ Page from the Kelmscott Chaucer in ◊xref{page layout}: Public-domain image. Sc
 Letter from B. F. Hallett in ◊xref{sample documents}: Public-domain image. Available from the Library of Congress “American Memory” collection (available from ◊link["http://memory.loc.gov/cgi-bin/query/h?ammem/rbpebib:@field(NUMBER+@band(rbpe+06102300))"]{memory.loc.gov}).
 
 Author illustration: © 2006 ◊link["http://www.nolinovak.com"]{Noli Novak.} Used under license.
-
-

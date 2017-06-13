@@ -9,7 +9,7 @@
 ◊(define (node->link node #:capitalize [caps? #f])
     (define node-string (->string node))
     (define link-name
-       (let* ([name (if (dev-mode?) 
+       (let* ([name (if (dev-mode?)
                        node-string
                        (select-from-metas 'title node))]
              [name (if caps? (capitalize-first-letter name) name)])
@@ -24,14 +24,18 @@
       (apply ul (map (compose1 li node->link) node-children))
       "")})
 
-◊(apply div #:class "toc" 
-  (map make-toc-subsection '(foreword.html 
+◊(apply div #:class "toc"
+  (map make-toc-subsection '(
+  risk.html
+  may.html
+  june.html
+  foreword.html
   introduction.html
   why-typography-matters.html
   type-composition.html
   text-formatting.html
   font-recommendations.html
-  a-brief-history-of-times-new-roman.html 
+  a-brief-history-of-times-new-roman.html
   page-layout.html
   sample-documents.html
   appendix.html

@@ -1,6 +1,6 @@
 #lang pollen
 
-◊(define-meta title "foreword by Bryan A. Garner")
+◊(define-meta title "foreword")
 ◊(section-from-metas metas)
 
 
@@ -8,7 +8,7 @@
 If Matthew Butterick didn't exist, it would be necessary to invent him. What's unusual about the tour de force you're now holding is that not only is it bold and fresh and original, but also that it's fully developed: it reads like a fifth edition. It's smartly reasoned, it's backed up by years of cultivated expertise, and it's well written.
 
 ◊margin-note{
-◊image[#:width "70%" "garner.gif"] 
+◊image[#:width "70%" "garner.gif"]
 ◊strong{Bryan A. Garner}, president of ◊link["http://lawprose.org/"]{LawProse, Inc.}, is the award-winning author of many books on legal writing and advocacy. He is the editor in chief of all editions of ◊link["http://www.amazon.com/Blacks-Law-Dictionary-Deluxe-Ninth/dp/0314199500/ref=sr_1_2?ie=UTF8&qid=1288461024&sr=8-2"]{Black's Law Dictionary}.}
 
 Here's how to use this book if you're a supervising lawyer (Sarah) dealing with an associate (Ralph):
@@ -73,5 +73,4 @@ Please remember these bits of dialogue. Adapt them. Use them. Often.
 
 Is Butterick infallible? No: in ◊xref{hierarchical headings}, he recommends three-level decimals. But otherwise he's assuredly infallible.
 
-◊sig{Bryan A. Garner}
-
+◊sig{AD}

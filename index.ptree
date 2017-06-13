@@ -5,6 +5,19 @@ toc.html
 foreword.html
 introduction.html
 
+artichoke.html
+
+risk.html
+
+◊june.html{
+  2017-06-04.html
+  2017-06-05.html
+}
+◊may.html{
+
+  30.html
+  }
+
 ◊why-typography-matters.html{
                              what-is-typography.html
                              who-is-typography-for.html
@@ -21,7 +34,7 @@ introduction.html
                        signature-lines.html
                        trademark-and-copyright-symbols.html
                        ellipses.html
-                       
+
                        ◊; advanced
                        apostrophes.html
                        accented-characters.html
@@ -45,7 +58,7 @@ introduction.html
                       bold-or-italic.html
                       all-caps.html
                       point-size.html
-                      
+
                       ◊; advanced
                       headings.html
                       letterspacing.html
@@ -75,7 +88,7 @@ a-brief-history-of-times-new-roman.html
                   hyphenation.html
                   block-quotations.html
                   bulleted-and-numbered-lists.html
-                  
+
                   ◊; advanced
                   tables.html
                   rules-and-borders.html
