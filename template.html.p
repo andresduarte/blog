@@ -46,7 +46,7 @@ if (navigator.appVersion.indexOf("Win")!=-1) {
 
 </script>
 
-  <title>◊(capitalize-first-letter here-title) | Typography for Lawyers</title>
+  <title>notes</title>
   <link rel="stylesheet" type="text/css" media="all" href="/styles.css" />
   <link rel="stylesheet" type="text/css" media="all" href="/fonts/non-equity.css" />
   ◊if[(not (select-from-metas 'tfl-font-template metas)) ""]{
@@ -89,6 +89,9 @@ document.write('<link rel="stylesheet" type="text/css" media="all" href="/firefo
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ TeX: { extensions: ["AMSmath.js", "AMSsymbols.js"] }});
+</script>
 ◊; FIN : Mathjax.
 
 
@@ -128,4 +131,3 @@ document.write('<link rel="stylesheet" type="text/css" media="all" href="/firefo
 
 
 </html>
-<!-- © 2008–2017 Matthew Butterick · website made with Pollen (pollenpub.com) -->

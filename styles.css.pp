@@ -48,7 +48,7 @@ div.margin-note a.xref {
 
 p {
   line-height: 1.4;
-  font-size: 2px;
+  font-size: 1px;
   margin-bottom: ◊|paragraph-space|;
 }
 
@@ -56,11 +56,23 @@ strong {
   font-weight: bolder;
 }
 
-h1, .home-link {
-  text-transform: uppercase;
-  font-family: "advocate-c43";
-  font-size: 2rem;
+h1, .chapter {
+  border-bottom: dashed 1px black;
+  padding-bottom: 6px;
+  margin-top: 0.1rem;
+  margin-bottom: 0.8rem;
+  font-size: 110%;
   line-height: 1.1;
+}
+
+
+h2, .section {
+  padding-bottom: 6px;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  font-size: 100%;
+  line-height: 1.1;
+  color: gray;
 }
 
 .home-image {
@@ -147,47 +159,13 @@ h1, .home-link {
 
 
 ◊; FADE : Modified (border-top, font).
-.chapter {
-  display: block;
-  font-family: 'Teko', sans-serif;
-  letter-spacing: 0.07rem;
-  text-transform: uppercase;
-  font-size: 190%;
-  line-height: 1.1;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  border-top: 1px solid black;
-  padding-top: 0.02em;
-  -moz-hyphens: none;
-  -webkit-hyphens: none;
-  -o-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;}
 
-.section {
-  display: block;
-  font-family: 'Teko', sans-serif;
-  letter-spacing: 0.07rem;
-  text-transform: uppercase;
-  font-size: 140%;
-  line-height: 1.1;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  border-bottom: 1px dashed black;
-  padding-top: 0.02em;
-  -moz-hyphens: none;
-  -webkit-hyphens: none;
-  -o-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;}
+
+
 
   ◊; FIN : Modified (border-top, font).
 
-.section + p:first-line {
-  font-weight: bolder;
-  font-family: "charter SmCap BT"; ◊; Modified font.
-  ◊(make-css-small-caps)
-}
+
 
 .font-headline {
   font-family: 'Teko', sans-serif;
@@ -206,7 +184,7 @@ h1, .home-link {
 
 .hanging-topic, .margin-note {
   position: absolute;
-  right: 2rem;
+  right: 0.5rem;
   width: 7rem;
   float: right;
   text-align: left;
@@ -244,12 +222,6 @@ padding-top: 6px;
 }
 ◊; FIN : adds top line.
 
-~h2.section + p:first-line {
-  font-family: "charter SmCap BT"; ◊; modified font.
-  font-weight: bolder;
-  text-transform: lowercase;
-  ◊make-css-ot-features['("c2sc") '(1)]
-}
 
 
 html {
@@ -294,7 +266,6 @@ margin-right: ◊|default-margin|;
 }
 
 h2 {
-  font-weight: bolder;
 }
 
 
@@ -309,7 +280,7 @@ a {
 
 a:hover {
   background: ◊|anchor-hover-color|;
-  border-radius: 8px; ◊; Adds round edges.
+
 }
 
 a, a:hover {
@@ -447,7 +418,7 @@ sig:before {
 ◊; FIN : special omission.
 
 p, li {
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-bottom: 0.8rem;
 }
 
@@ -581,7 +552,8 @@ margin-top: 0.1rem;
 table { ◊; basic table format, based on shortcut table
 margin-bottom: 1.5em;
 border-collapse: collapse;
-width: 95%;
+width: 30%;
+margin-left: 35%;
 }
 
 table a {
