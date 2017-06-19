@@ -67,6 +67,7 @@ h1, .chapter {
 
 
 h2, .section {
+  font-family: 'Dosis';
   padding-bottom: 6px;
   margin-top: 2rem;
   margin-bottom: 0.8rem;
@@ -854,6 +855,10 @@ div.pdf-thumbnail.centurion {
 .mcqueen:hover {
   background-color: #FF001F;
   color: #fff;
+}
+
+.mcprincess {
+  font-family: 'Source Code Pro', sans-serif;
 }
 ◊; FIN : alternative TOC.
 

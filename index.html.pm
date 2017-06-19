@@ -1,8 +1,12 @@
 #lang pollen
 
 ◊span[#:class "mcqueen"]{june}
-◊xref["2017-06-04.html"]{◊span[#:class "mcking"]{04}} ◊xref["2017-06-05.html"]{◊span[#:class "mcking"]{05}}
-◊xref["/june/30.html"]{◊span[#:class "mcking"]{08}}
+◊margin-note{◊span[#:class "mcking"]{06.01.17}}
+◊xref["/june/order.html"]{◊span[#:class "mcking"]{Order}}
+◊margin-note{◊span[#:class "mcking"]{06.15.17}}
+◊xref["/june/color.html"]{◊span[#:class "mcking"]{Colour}}
+◊margin-note{◊span[#:class "mcking"]{06.15.17}}
+◊xref["/june/vera-verto.html"]{◊span[#:class "mcking"]{Vera Verto}}
 
 
 ◊xref["/documentation.html"]{◊span[#:class "mcqueen"]{documentation}}
@@ -20,3 +24,11 @@
 ◊xref["/mathematics/formal-system/main-parts.html"]{◊span[#:class "mcking"]{main parts}}
 ◊xref["/mathematics/formal-system/induction.html"]{◊span[#:class "mcking"]{induction}}
 ◊xref["/mathematics/formal-system/proofs.html"]{◊span[#:class "mcking"]{proofs}}
+◊xref["/mathematics/formal-system/real-analysis.html"]{◊span[#:class "mcking"]{real analysis}}
+
+◊span[#:class "mcqueen"]{data science}
+◊xref["/data-science/intro.html"]{◊span[#:class "mcking"]{intro}}
+
+◊span[#:class "mcqueen"]{pain}
+◊margin-note{◊span[#:class "mcking"]{06.16.17}}
+◊xref["/pain/01.html"]{◊span[#:class "mcking"]{01}}

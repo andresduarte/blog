@@ -81,8 +81,6 @@ Negation : $P \wedge \neg Q$
 ◊margin-note{ $P \iff Q$}
 $P$ if and only if $Q$
 
-Negation : $P \wedge \neg Q$
-
 ◊margin-note{ Table 5: truth table for equivalence}
 ◊slow-table{
   $\phi$ | $\psi$ | $\phi \iff \psi$

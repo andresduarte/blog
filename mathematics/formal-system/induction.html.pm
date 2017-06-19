@@ -36,6 +36,7 @@ Template for Induction Proofs
 
   Define appropriate predicate $P(n)$
 
+
   ◊margin-note{Base case}
   Prove that $P(0)$ is $true$
 
@@ -65,7 +66,7 @@ Template for Induction Proofs
   Numerical Solutions give you answers but they don't give you understanding.
 
 
-  To prove that something is \emph{false} you can prove that it's negation is true.
+  To prove that something is ◊em{false} you can prove that it's negation is true.
 }
 
 ◊section{Positive Statement}
@@ -76,7 +77,7 @@ Statement without a negation symbol.
 Mathematical expression that two or more quantities are equal.
 
 ◊section{Identity}
-Mathematical expression that two or more quantities are equal for all values of $n$.
+Mathematical expression that two or more quantities are equal, for all values of $n$.
 
 ◊section{Division}
 ◊margin-note{$a$ divides $b$}
@@ -107,7 +108,7 @@ Two integers are relatively prime if they share no common positive divisors exce
 
 
 ◊section{Prime Decomposition}
-The factorization of a number it its constituent primes.
+The factorization of a number into its constituent primes.
 
 ◊section{Factor}
 ◊margin-note{Also called a ◊strong{divisor}}

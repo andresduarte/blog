@@ -26,26 +26,34 @@ Any well-defined collection of objects.
   \mathbb{N}  &: \text{set of all natural numbers}					 	\\
   \end{align*}
 }
+
 ◊section{Real Numbers}
+◊margin-note{Developed for mathematics.}
 All numbers that can be found on the real line.
 
 ◊section{Irrational Numbers}
 All real numbers that are not rational.
 
 ◊section{Rational Numbers}
+◊margin-note{Developed for measurement.
+The rational line is dense.}
+
 All numbers of the form:
 ◊$${
-  R_n= \frac{p}{q}
+  \frac{p}{q}
 }
 Where $p$,$q$ are integers and $q \not= 0$
 
 ◊section{Integers}
+◊margin-note{Developed for money.}
 All numbers that can be expressed without a fractional component.
 ◊$${
   \{\ldots , -2, -1, 0, 1, 2, \ldots \}
 }
 
+
 ◊section{Natural Numbers}
+◊margin-note{Developed for counting.}
 All positive integers
 ◊$${
   \{1, 2, 3, 4, \ldots \}
