@@ -1,13 +1,7 @@
 #lang pollen
 
-◊(define ($ . xs)
-  `(mathjax ,(apply string-append `("$" ,@xs "$"))))
-◊(define ($$ . xs)
-  `(mathjax ,(apply string-append `("$$" ,@xs "$$"))))
-
 ◊span[#:class "mcqueen"]{Colour}
 ◊span[#:class "mcduke"]{06.15.17}
-
 
 ◊(nobar)
 

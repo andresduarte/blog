@@ -1,14 +1,8 @@
 #lang pollen
 
-◊(define ($ . xs)
-  `(mathjax ,(apply string-append `("$" ,@xs "$"))))
-◊(define ($$ . xs)
-  `(mathjax ,(apply string-append `("$$" ,@xs "$$"))))
-
 ◊span[#:class "mcqueen"]{Proof}
 ◊span[#:class "mcduke"]{06.14.17}
-
-
+s
 ◊(nobar)
 
 ◊;---------- START

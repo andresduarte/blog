@@ -296,7 +296,10 @@ a.xref {
 
 
 img {
-  width: 100%;
+  width: 50%;
+  display: inline-block;
+  margin: 10px;
+  float: left;
 }
 
 .bordered {
@@ -432,7 +435,7 @@ ul li {
 }
 
 div#doc ul li:before {
-  font-family: "charter";
+  font-family: "source code pro";
   content: "•"; ◊; using concourse-t3-index, this will come out as an arrow
   float:left;
   margin-left: -2.5rem;
@@ -460,9 +463,6 @@ margin-left: -2.5rem;
 margin-top: 0.1rem;
 }
 
-ol li p {
-  font-family: "charter"; ◊; changes font back for body of list item
-}
 
 ul.btw {
   margin-top: 2rem;
@@ -964,7 +964,6 @@ a.pdf img:hover {
 
 
 .highlight {
-    border-left: 1px dashed #ebebeb;
     background: #F2F7FC;
     margin-bottom: 1.2rem;
 }
@@ -972,6 +971,9 @@ a.pdf img:hover {
 .highlight .linenos {
     display: none;
 }
+
+
+
 
 
 ◊; FADE : Styles code blocks.
