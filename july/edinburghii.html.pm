@@ -7,10 +7,6 @@
 
 ◊;---------- START
 
-Scottish National Gallery Of Modern Art
-
-St Andrews
-
 ◊margin-note{
   ◊link["https://en.wikipedia.org/wiki/Tracey_Emin"]{Tracey Emin}
 }
@@ -22,12 +18,13 @@ St Andrews
 ◊margin-note{
   ◊link["https://en.wikipedia.org/wiki/Charles_Jencks"]{Charles Jencks}
 }
-◊image[#:width "50%" "july2-8.jpg"]
-◊image[#:width "50%" "july2-9.jpg"]
+
+◊image[#:width "40%" "july2-8.jpg"]
+◊image[#:width "40%" "july2-9.jpg"]
 
 ◊margin-note{St Andrews}
-◊image[#:width "40%" "july2-1.jpg"]
-◊image[#:width "40%" "july2-2.jpg"]
+◊image[#:width "50%" "july2-1.jpg"]
+◊image[#:width "50%" "july2-2.jpg"]
 ◊image[#:width "50%" "july2-3.jpg"]
 ◊image[#:width "50%" "july2-4.gif"]
 ◊image[#:width "50%" "july2-5.jpg"]

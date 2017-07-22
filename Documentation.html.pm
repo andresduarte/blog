@@ -254,3 +254,10 @@ This is displayed mathematics.
 }
 
 ◊(exclusion) ◊;----------
+
+◊margin-note{◊link["https://www.google.co.uk/?gfe_rd=cr&ei=_2ZdWZu1AeuA8Qfr4r34Aw"]{Hello}}
+
+
+
+
+◊margin-note{words}

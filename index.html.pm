@@ -1,5 +1,7 @@
 #lang pollen
 
+◊xref["apartments.html"]{◊span[#:class "mcqueen"]{apartments}}
+
 ◊span[#:class "mcqueen"]{july}
 ◊margin-note{◊span[#:class "mcking"]{01}}
 ◊xref["/july/edinburghi.html"]{◊span[#:class "mcking"]{Edinburgh I}}
@@ -7,6 +9,34 @@
 ◊xref["/july/edinburghii.html"]{◊span[#:class "mcking"]{Edinburgh II}}
 ◊margin-note{◊span[#:class "mcking"]{04}}
 ◊xref["/july/edinburgh>york.html"]{◊span[#:class "mcking"]{Edinburgh > York}}
+◊margin-note{◊span[#:class "mcking"]{05}}
+◊xref["/july/york.html"]{◊span[#:class "mcking"]{York}}
+◊margin-note{◊span[#:class "mcking"]{06}}
+◊xref["/july/yorkii.html"]{◊span[#:class "mcking"]{York ii}}
+◊margin-note{◊span[#:class "mcking"]{07}}
+◊xref["/july/rotterdam>amsterdam.html"]{◊span[#:class "mcking"]{Rotterdam > Amsterdam}}
+◊margin-note{◊span[#:class "mcking"]{08}}
+◊xref["/july/amsterdam.html"]{◊span[#:class "mcking"]{Amsterdam}}
+◊margin-note{◊span[#:class "mcking"]{09}}
+◊xref["/july/amsterdamii.html"]{◊span[#:class "mcking"]{Amsterdam ii}}
+◊margin-note{◊span[#:class "mcking"]{10}}
+◊xref["/july/munster>cologne.html"]{◊span[#:class "mcking"]{Munster > Cologne}}
+◊margin-note{◊span[#:class "mcking"]{11}}
+◊xref["/july/kassel.html"]{◊span[#:class "mcking"]{kassel}}
+◊margin-note{◊span[#:class "mcking"]{12}}
+◊xref["/july/berlin.html"]{◊span[#:class "mcking"]{berlin}}
+◊margin-note{◊span[#:class "mcking"]{13}}
+◊xref["/july/berlinii.html"]{◊span[#:class "mcking"]{berlin ii}}
+◊margin-note{◊span[#:class "mcking"]{14}}
+◊xref["/july/prague.html"]{◊span[#:class "mcking"]{prague}}
+◊margin-note{◊span[#:class "mcking"]{15}}
+◊xref["/july/pragueii.html"]{◊span[#:class "mcking"]{prague ii}}
+◊margin-note{◊span[#:class "mcking"]{16}}
+◊xref["/july/barcelona.html"]{◊span[#:class "mcking"]{barcelona}}
+◊margin-note{◊span[#:class "mcking"]{17}}
+◊xref["/july/barcelonaii.html"]{◊span[#:class "mcking"]{barcelona ii}}
+◊margin-note{◊span[#:class "mcking"]{18}}
+◊xref["/july/barcelonaiii.html"]{◊span[#:class "mcking"]{barcelona iii}}
 
 ◊span[#:class "mcqueen"]{june}
 ◊margin-note{◊span[#:class "mcking"]{01}}

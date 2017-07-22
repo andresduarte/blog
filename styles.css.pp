@@ -93,13 +93,13 @@ h2, .section {
 }
 
 .home-overlay {
-    background-size: 22rem;
-    background-repeat: no-repeat;
-    width: 22rem;
-    overflow: auto;
-    border: 1px solid gray;
-     margin-top: 2rem;
-     margin-bottom: 2rem;
+  background-size: 22rem;
+  background-repeat: no-repeat;
+  width: 22rem;
+  overflow: auto;
+  border: 1px solid gray;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .home-overlay-inner {
@@ -107,28 +107,28 @@ h2, .section {
   opacity: 0;
   transition: opacity 0.3s;
   min-height: 23rem;
-  }
+}
 
 .home-overlay-inner:hover {
   opacity: 0.98;
   transition: opacity 0.3s;
-  }
+}
 
 .home-overlay-inner ul {
- padding: 0;
- margin: 2rem;
- margin-left: 3rem;
- margin-right: 1.5rem;
- height: 100%;
- }
-
- .home-overlay-inner ol {
   padding: 0;
   margin: 2rem;
   margin-left: 3rem;
   margin-right: 1.5rem;
   height: 100%;
-  }
+}
+
+.home-overlay-inner ol {
+  padding: 0;
+  margin: 2rem;
+  margin-left: 3rem;
+  margin-right: 1.5rem;
+  height: 100%;
+}
 
 .home-overlay-inner p {
   font-size: 85%;
@@ -158,16 +158,6 @@ h2, .section {
   width: 100%; ◊; makes each li take one row
 }
 
-
-◊; FADE : Modified (border-top, font).
-
-
-
-
-  ◊; FIN : Modified (border-top, font).
-
-
-
 .font-headline {
   font-family: 'Teko', sans-serif;
   font-size: 180%;
@@ -193,7 +183,7 @@ h2, .section {
 
 .margin-note {
   font-size: 82%;
-  margin-bottom: 1rem; ◊; prevents two asides from adjacency
+  margin-bottom: 1rem; ◊; prevents two asides from adjacency.
   font-family: 'Dosis', sans-serif; ◊; Modified font.
   line-height: 1.35;
   color: #667; ◊; Modified color.
@@ -215,22 +205,18 @@ h2, .section {
   line-height: 1.2;
 }
 
-◊; FADE : adds top line.
 .hanging-topic {
-margin-bottom: 2em;
-border-top: solid 2px black;
-padding-top: 6px;
+  margin-bottom: 2em;
+  border-top: solid 2px black; ◊; Adds top line.
+  padding-top: 6px;
 }
-◊; FIN : adds top line.
-
-
 
 html {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-  position: relative; ◊; this establishes body as reference container
+  position: relative; ◊; Establishes body as reference container.
   padding: 0;
   margin-left: auto;
   margin-right: auto;
@@ -251,24 +237,17 @@ margin-left: ◊|body-left-margin|;
 margin-right: ◊|default-margin|;
 }
 
-
 ◊(define content-width "29rem")
+
 #content {
-    width: ◊|content-width|;
-    padding: 4rem 0 8rem 0;
+  width: ◊|content-width|;
+  padding: 4rem 0 8rem 0;
 }
-
-
-
 
 #doc {
   font-family: "source sans pro";
   color: #222; ◊; Added this color, unsure about it's effect.
 }
-
-h2 {
-}
-
 
 em {
   font-style: italic;
@@ -294,18 +273,16 @@ a.xref {
   ◊(make-css-small-caps)
 }
 
-
 img {
-  width: 50%;
+  width: 100%;
   display: inline-block;
   margin: 10px;
-  float: left;
+
 }
 
 .bordered {
   border: 1px solid gray;
 }
-
 
 p + .indented {
   margin-top: 1rem;
@@ -354,8 +331,8 @@ table.captioned + table.captioned {
 }
 
 table.captioned td {
-    border: 0;
-    vertical-align: baseline;
+  border: 0;
+  vertical-align: baseline;
 }
 
 .caption, .caption-runin {
@@ -363,7 +340,7 @@ table.captioned td {
 }
 
 .caption-runin {
-    margin-right: 0.3rem;
+  margin-right: 0.3rem;
 }
 
 .caption {
@@ -408,35 +385,33 @@ sig:before {
   margin-right: 35%;
 }
 
-◊; FADE : special omission.
 .exclusion {
   height: 0.2rem;
-  border-bottom: 1px solid #DC702E;
+  border-bottom: 1px solid #DC702E; ◊; Orange line.
   margin-bottom: ◊|paragraph-space|;
 }
 
-.nobar {
+.nobar { ◊; Empty space.
   height: 0.2rem;
   margin-bottom: ◊|paragraph-space|;
 }
-◊; FIN : special omission.
 
 p, li {
-    font-size: 0.9rem;
-    margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
 }
 
 ul li {
-    list-style: none;
-    margin-left: 1.35rem;
-    padding-left: 1.15rem; ◊; adds to 2.5rem, same as margin-left for ol li
-    margin-bottom: 0.7em;
-    font-size: 95%;
+  list-style: none;
+  margin-left: 1.35rem;
+  padding-left: 1.15rem; ◊; Adds to 2.5rem, same as margin-left  ol li.
+  margin-bottom: 0.7em;
+  font-size: 95%;
 }
 
 div#doc ul li:before {
   font-family: "source code pro";
-  content: "•"; ◊; using concourse-t3-index, this will come out as an arrow
+  content: "•";
   float:left;
   margin-left: -2.5rem;
   margin-top: 0.1rem;
@@ -444,43 +419,39 @@ div#doc ul li:before {
 
 div#doc div.toc ul li:before  {
   content: none;
-
 }
-
-
 
 ol li {
 ◊; see firefox.css for an override of this value.
 margin-left: 1.35rem;
-padding-left: 1.15rem; ◊; adds to 2.5rem, same as margin-left for ol li
+padding-left: 1.15rem; ◊; Adds to 2.5rem, same as margin-left ol li.
 margin-bottom: 0.7em;
 font-size: 95%;
 }
 
 ol li:before {
-float:left;
-margin-left: -2.5rem;
-margin-top: 0.1rem;
+  float:left;
+  margin-left: -2.5rem;
+  margin-top: 0.1rem;
 }
-
 
 ul.btw {
   margin-top: 2rem;
 }
 
 #btw-title {
-display: block;
-text-align: center;
-font-family: '"concourse-c6"';
-font-size: 80%;
-◊(make-css-caps)
-font-weight: bolder;
-letter-spacing: 2px;
-margin-bottom: 1em;
-padding-bottom: 0.6em;
-border-bottom: 1px solid gray;
-margin-left: 35%;
-margin-right: 35%;
+  display: block;
+  text-align: center;
+  font-family: '"concourse-c6"';
+  font-size: 80%;
+  ◊(make-css-caps)
+  font-weight: bolder;
+  letter-spacing: 2px;
+  margin-bottom: 1em;
+  padding-bottom: 0.6em;
+  border-bottom: 1px solid gray;
+  margin-left: 35%;
+  margin-right: 35%;
 }
 
 .btw li {
@@ -492,13 +463,12 @@ font-size: 95%;
 }
 
 .btw li:before {
-font-family: "charter";
-content: "•"; ◊; using concourse-t3-index, this will come out as an arrow
-float:left;
-margin-left: -2.5rem;
-margin-top: 0.1rem;
+  font-family: "charter";
+  content: "•";
+  float:left;
+  margin-left: -2.5rem;
+  margin-top: 0.1rem;
 }
-
 
 .subhead {
   font-family: "charter SmCap BT"; ◊; Modified font.
@@ -512,7 +482,6 @@ margin-top: 0.1rem;
   font-family: "Source Code Pro"; ◊; Modified font.
 }
 
-
 .glyph:before {
   content: "( ";
 }
@@ -520,7 +489,6 @@ margin-top: 0.1rem;
 .glyph:after {
   content: " )";
 }
-
 
 .madlib {
   display: inline-block;
@@ -547,67 +515,59 @@ margin-top: 0.1rem;
 }
 
 .font-details p {
-    font-size: 80%;
+  font-size: 80%;
 }
 
 table { ◊; basic table format, based on shortcut table
-margin-bottom: 1.5em;
-border-collapse: collapse;
-width: 30%;
-margin-left: 35%;
+  margin-bottom: 1.5em;
+  border-collapse: collapse;
+  width: 100%;
 }
 
 table a {
   border: 0;
 }
 
-◊; technique for getting inner borders only
-tr + tr + tr {
-border-top: 1px solid gray;
+tr + tr + tr { ◊; technique for getting inner borders only
+  border-top: 1px solid gray;
 }
-td + td {
-
-}
-
 
 td {
-padding: 0.4em;
-text-align: center;
+  padding: 0.4em;
+  text-align: center;
 }
 
 .buy-table {
-    width: 100%;
-    margin-top: 1.5rem;
+  width: 100%;
+  margin-top: 1.5rem;
 }
 
 th {
-font-family: "Source Sans Pro"; ◊; Modified font, effect in doubt.
-font-weight: normal;
-text-transform: lowercase;
-font-size: 85%;
-padding: 0.3rem 0.5rem 0.3rem 0.5rem;
-line-height: 1.05;
+  font-family: "Source Sans Pro"; ◊; Modified font, effect in doubt.
+  font-weight: normal;
+  text-transform: lowercase;
+  font-size: 85%;
+  padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+  line-height: 1.05;
 }
 
-
-
 .buy-table td {
-    padding: 0;
-    height: 3.5rem;
-    border: 0;
+  padding: 0;
+  height: 3.5rem;
+  border: 0;
 }
 
 a.buylink, .buy-table td a {
-    height: 100%;
-    width: 100%;
-    background: #a33;
-    color: white;
-    padding: 0.3em 0.5em 0.3em 0.5em;
-    border-radius: 1em;
-    font-family: "Source Sans Pro"; ◊; Modified font, effect in doubt.
-    ◊(make-css-caps);
-    letter-spacing: 0.04rem;
-    border: none;
+  height: 100%;
+  width: 100%;
+  background: #a33;
+  color: white;
+  padding: 0.3em 0.5em 0.3em 0.5em;
+  border-radius: 1em;
+  font-family: "Source Sans Pro"; ◊; Modified font, effect in doubt.
+  ◊(make-css-caps);
+  letter-spacing: 0.04rem;
+  border: none;
 }
 
 .font-sample a.buylink {
@@ -619,40 +579,35 @@ a.buylink, .buy-table td a {
 }
 
 .font-sample a[href$="pdf"] {
-    display: inline-block;
-    border: 2px solid gray;
-    width: 70%;
+  display: inline-block;
+  border: 2px solid gray;
+  width: 70%;
 }
 
 .font-sample h3 {
-    font-family: "advocate-c43";
-    font-size: 170%;
-    font-weight: normal;
-    text-transform: uppercase;
-    width: 71%;
-    margin-bottom: 3rem;
+  font-family: "advocate-c43";
+  font-size: 170%;
+  font-weight: normal;
+  text-transform: uppercase;
+  width: 71%;
+  margin-bottom: 3rem;
 }
 
 a.buylink:hover, .buy-table td a:hover {
-    background: #e33;
-    text-decoration: none;
+  background: #e33;
+  text-decoration: none;
 }
 
 a.buylink:active, .buy-table td a:active {
-    background: #ccc;
+  background: #ccc;
 }
-
-
 
 .mb-font-specimen {
-font-size:150%;
-line-height:1.20;
-white-space:nowrap;
-◊(make-css-editable);
+  font-size:150%;
+  line-height:1.20;
+  white-space:nowrap;
+  ◊(make-css-editable);
 }
-
-
-
 
 ◊(define double-quote-width .50)
 ◊(define single-quote-width (/ double-quote-width 2))
@@ -680,9 +635,6 @@ margin-left: ◊(+ single-quote-width)em;
 .margin-note dquo-pull, .margin-note squo-pull {
   margin-left: inherit;
 }
-
-
-
 
 
 ◊;;;;;;;;;;;;;;;;;;;;;;;;;
