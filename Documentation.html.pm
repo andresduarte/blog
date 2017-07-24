@@ -250,14 +250,71 @@ This is displayed mathematics.
 
 ◊highlight['racket]{
 This is displayed mathematics.
+
+
 ∆$${ \{x \in \mathbb{R} \mid a < x < b \} }
 }
 
 ◊(exclusion) ◊;----------
 
-◊margin-note{◊link["https://www.google.co.uk/?gfe_rd=cr&ei=_2ZdWZu1AeuA8Qfr4r34Aw"]{Hello}}
+◊glyph{hello}
+
+◊highlight['racket]{
+  ∆glyph{hello}
+}
+
+◊(exclusion) ◊;----------
+
+◊green{hello} ◊red{so i must} ◊blue{continue}
 
 
+◊highlight['racket]{
+  ∆green{hello} ∆red{so i must} ∆blue{continue}
+}
+
+◊(exclusion) ◊;----------
+
+◊left-note{Fade In}
+◊right-note{Fade out}
+middle
+
+◊highlight['racket]{
+  ∆left-note{Fade In}
+  ∆right-note{Fade out}
+  middle
+}
 
 
-◊margin-note{words}
+◊(orange-line)
+
+◊capitalize-first-letter{hello again to all my friends}
+
+◊highlight['racket]{
+  ∆capitalize-first-letter{hello again to all my friends}
+}
+
+◊(orange-line)
+
+◊red-title{Greetings from last night.}
+
+◊highlight['racket]{
+  ∆red-title{Greetings from last night.}
+}
+
+◊(orange-line)
+
+◊all-caps{Hello from my friends.}
+
+◊highlight['racket]{
+  ∆all-caps{Hello from my friends.}
+}
+
+◊(orange-line)
+
+◊mono{And so i pushed on and on until nothing was left behind.}
+
+◊highlight['racket]{
+  ∆mono{And so i pushed on and on until nothing was left behind.}
+}
+
+◊(orange-line)

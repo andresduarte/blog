@@ -1,13 +1,14 @@
 #lang pollen
 
-◊span[#:class "mcqueen"]{Books}
-◊span[#:class "mcduke"]{07.04.17}
+◊red-title{Books}
+◊small-num{07.04.17}
 
 ◊(nobar)
 
 ◊;---------- START
 
 ◊bulleted-list{
-  ◊margin-note{started}
+  ◊right-note{◊green{done} ◊num{07.17}}
+  ◊left-note{◊num{◊red{10}}}
   Happiness
 }

@@ -1,7 +1,7 @@
 #lang pollen
 
-◊span[#:class "mcqueen"]{Areas of Study}
-◊span[#:class "mcduke"]{06.13.17}
+◊red-title{Areas of Study}
+◊small-num{06.13.17}
 
 ◊(nobar)
 

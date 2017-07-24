@@ -34,8 +34,7 @@ div.margin-note a.xref:after {
 
 p a.xref {
   content: none;
-  font-family: "charter SmCap BT"; ◊; Small caps for interior.
-  ◊(make-css-small-caps)
+  font-family: "Source Sans Pro"; ◊; Small caps for interior.
 }
 
 div.margin-note a.xref {
@@ -182,6 +181,51 @@ h2, .section {
 }
 
 .margin-note {
+  font-size: 82%;
+  margin-bottom: 1rem; ◊; prevents two asides from adjacency.
+  font-family: 'Dosis', sans-serif; ◊; Modified font.
+  line-height: 1.35;
+  color: #667; ◊; Modified color.
+}
+
+.right-note {
+  position: absolute;
+  right: 0.5rem;
+  width: 7rem;
+  float: right;
+  text-align: left;
+  font-size: 82%;
+  margin-bottom: 1rem; ◊; prevents two asides from adjacency.
+  font-family: 'Dosis', sans-serif; ◊; Modified font.
+  line-height: 1.35;
+  color: #667; ◊; Modified color.
+}
+
+.left {
+  position: absolute;
+  right: 42rem;
+  width: 7rem;
+  float: left;
+  text-align: right;
+}
+
+.left {
+  font-size: 82%;
+  margin-bottom: 1rem; ◊; prevents two asides from adjacency.
+  font-family: 'Dosis', sans-serif; ◊; Modified font.
+  line-height: 1.35;
+  color: #667; ◊; Modified color.
+}
+
+.left-note {
+  position: absolute;
+  right: 42rem;
+  width: 7rem;
+  float: left;
+  text-align: right;
+}
+
+.left-note {
   font-size: 82%;
   margin-bottom: 1rem; ◊; prevents two asides from adjacency.
   font-family: 'Dosis', sans-serif; ◊; Modified font.
@@ -391,6 +435,18 @@ sig:before {
   margin-bottom: ◊|paragraph-space|;
 }
 
+.orange-line {
+  height: 0.2rem;
+  border-bottom: 1px solid #DC702E; ◊; Orange line.
+  margin-bottom: ◊|paragraph-space|;
+}
+
+.obar {
+  height: 0.2rem;
+  border-bottom: 1px solid #DC702E; ◊; Orange line.
+  margin-bottom: ◊|paragraph-space|;
+}
+
 .nobar { ◊; Empty space.
   height: 0.2rem;
   margin-bottom: ◊|paragraph-space|;
@@ -488,6 +544,18 @@ font-size: 95%;
 
 .glyph:after {
   content: " )";
+}
+
+.green {
+  color: #60C655;
+}
+
+.blue {
+  color: #3481F2;
+}
+
+.red {
+  color: #EE6B5F;
 }
 
 .madlib {
@@ -793,8 +861,39 @@ div.pdf-thumbnail.centurion {
   color: #FF001F;
 }
 
+.mcqueen:hover {
+  background-color: #FF001F;
+  color: #fff;
+}
+
+.red-title {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-bottom: 10px;
+  color: #FF001F;
+}
+
+.red-title:hover {
+  background-color: #FF001F;
+  color: #fff;
+}
+
+.all-caps {
+  text-transform: uppercase;
+}
+
 .mcking {
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+.num {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.small-num {
+  font-family: 'Source Sans Pro', sans-serif;
+  ◊(make-css-small-caps)
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .mcduke {
@@ -802,11 +901,6 @@ div.pdf-thumbnail.centurion {
   ◊(make-css-small-caps)
   padding-bottom: 2rem;
   margin-bottom: 2rem;
-}
-
-.mcqueen:hover {
-  background-color: #FF001F;
-  color: #fff;
 }
 
 .mcprincess {

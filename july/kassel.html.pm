@@ -1,11 +1,11 @@
 #lang pollen
 
-◊span[#:class "mcqueen"]{Kassel}
-◊span[#:class "mcduke"]{07.11.17}
+◊red-title{Kassel}
+◊small-num{07.11.17}
 
 ◊(nobar)
 
 ◊;---------- START
 
-◊margin-note{Documenta 14}
+◊right-note{Documenta 14}
 ◊image[#:width "80%" "july11-1.jpg"]

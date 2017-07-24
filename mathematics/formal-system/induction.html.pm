@@ -1,7 +1,7 @@
 #lang pollen
 
-◊span[#:class "mcqueen"]{Induction}
-◊span[#:class "mcduke"]{06.14.17}
+◊red-title{Induction}
+◊small-num{06.14.17}
 
 ◊(nobar)
 

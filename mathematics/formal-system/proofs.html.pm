@@ -1,7 +1,7 @@
 #lang pollen
 
-◊span[#:class "mcqueen"]{Proof}
-◊span[#:class "mcduke"]{06.14.17}
+◊red-title{Proof}
+◊small-num{06.14.17}
 s
 ◊(nobar)
 

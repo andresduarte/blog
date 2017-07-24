@@ -1,7 +1,7 @@
 #lang pollen
 
-◊span[#:class "mcqueen"]{Munster > Cologne}
-◊span[#:class "mcduke"]{07.10.17}
+◊red-title{Munster > Cologne}
+◊small-num{07.10.17}
 
 ◊(nobar)
 

@@ -1,7 +1,7 @@
 #lang pollen
 
-◊span[#:class "mcqueen"]{Windsor}
-◊span[#:class "mcduke"]{06.29.17}
+◊red-title{Windsor}
+◊small-num{06.29.17}
 
 ◊(nobar)
 

@@ -1,7 +1,7 @@
 #lang pollen
 
-◊span[#:class "mcqueen"]{Sexual liberation}
-◊span[#:class "mcduke"]{06.18.17}
+◊red-title{Sexual liberation}
+◊small-num{06.18.17}
 
 ◊(nobar)
 

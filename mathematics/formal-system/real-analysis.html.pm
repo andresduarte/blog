@@ -1,7 +1,7 @@
 #lang pollen
 
-◊span[#:class "mcqueen"]{Real Analysis}
-◊span[#:class "mcduke"]{06.13.17}
+◊red-title{Real Analysis}
+◊small-num{06.13.17}
 
 ◊(nobar)
 

@@ -364,8 +364,7 @@ Create a span with the class @tt{glyph}.
 Here, we'll use @racket[default-tag-function], which is an easy way to make a simple tag function. Any keywords passed in will be propagated to every use of the tag function.
 
 @chunk[<glyph>
-       (define glyph (default-tag-function 'span #:class "glyph"))]
-
+        (define glyph (default-tag-function 'span #:class "glyph"))]
 
 @defproc[
  (image-wrapped
@@ -379,6 +378,7 @@ Like @racket[image], but with some extra attributes.
                     'class "icon"
                     'style "width: 120px;"
                     'align "left"))]
+
 
 @defproc[
  (detect-list-items
@@ -920,6 +920,24 @@ Presented without docs or comment, as it should be obvious at this point what th
 
        (define exclusion (default-tag-function 'div #:class "exclusion"))
 
+       (define orange-line (default-tag-function 'div #:class "orange-line"))
+
+       (define obar (default-tag-function 'div #:class "obar"))
+
+       (define green (default-tag-function 'span #:class "green"))
+
+       (define blue (default-tag-function 'span #:class "blue"))
+
+       (define red (default-tag-function 'span #:class "red"))
+
+       (define all-caps (default-tag-function 'span #:class "all-caps"))
+
+       (define red-title (default-tag-function 'span #:class "red-title"))
+
+       (define num (default-tag-function 'span #:class "num"))
+
+       (define small-num (default-tag-function 'span #:class "small-num"))
+
        (define nobar (default-tag-function 'div #:class "nobar"))
 
        (define midbar (default-tag-function 'div #:class "midbar"))
@@ -933,6 +951,15 @@ Presented without docs or comment, as it should be obvious at this point what th
 
        (define (margin-note . xs)
          `(div ((class "margin-note") ,no-hyphens-attr) ,@xs))
+
+       (define (left . xs)
+         `(div ((class "left") ,no-hyphens-attr) ,@xs))
+
+       (define (left-note . xs)
+         `(div ((class "left-note") ,no-hyphens-attr) ,@xs))
+
+       (define (right-note . xs)
+         `(div ((class "right-note") ,no-hyphens-attr) ,@xs))
 
        (define os (default-tag-function 'span #:class "os"))
 

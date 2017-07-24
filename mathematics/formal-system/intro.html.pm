@@ -1,7 +1,7 @@
 #lang pollen
 
-◊span[#:class "mcqueen"]{Intro - Formal Systems}
-◊span[#:class "mcduke"]{06.14.17}
+◊red-title{Intro - Formal Systems}
+◊small-num{06.14.17}
 
 ◊(nobar)
 

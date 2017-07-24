@@ -1,7 +1,7 @@
 #lang pollen
 
-◊span[#:class "mcqueen"]{Quantifiers}
-◊span[#:class "mcduke"]{06.14.17}
+◊red-title{Quantifiers}
+◊small-num{06.14.17}
 
 ◊(nobar)
 
