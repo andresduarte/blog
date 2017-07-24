@@ -1,19 +1,11 @@
 #lang pollen
 
-◊(define ($ . xs)
-  `(mathjax ,(apply string-append `("$" ,@xs "$"))))
-◊(define ($$ . xs)
-  `(mathjax ,(apply string-append `("$$" ,@xs "$$"))))
-
-◊span[#:class "mcqueen"]{Documentation}
-◊span[#:class "mcduke"]{06.12.17}
-
+◊red-title{Documentation}
+◊small-num{06.12.17}
 
 ◊(nobar)
 
 ◊;---------- START
-
-
 
 ◊em{Italics}
 
@@ -181,10 +173,10 @@
 
 ◊(exclusion) ◊;----------
 
-◊xref{2017-06-04}
+◊xref["/progress.html"]{progress}
 
 ◊highlight['racket]{
-∆xref{2017-06-04}
+  ∆xref["/progress.html"]{progress}
 }
 
 ◊(exclusion) ◊;----------

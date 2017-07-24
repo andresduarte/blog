@@ -48,8 +48,23 @@
 ◊image[#:width "50%" "blue.jpg"]}
 ◊image[#:width "40%" "tiffany1.jpg"]
 
-◊margin-note{Yves
-◊image[#:width "50%" "blue2.jpg"]}
+◊margin-note{
+  Yves
+  ◊image[#:width "50%" "blue2.jpg"]
+  Inspired by Tom Sachs.}
+}
 ◊image[#:width "40%" "klein.jpg"]
 
-◊margin-note{Inspired by Tom Sachs.}
+
+◊(orange-line)
+
+◊section{Harry Potter and the Prizoner of Azkaban}
+◊margin-note{Meret Oppenheim◊image[#:width "100%" "meret2.jpg"]}
+◊image[#:width "50%" "meret1.gif"]
+
+◊(nobar)
+◊(nobar)
+
+◊section{Children's of Men}
+◊margin-note{Alfonso Cuarón}
+◊image[#:width "50%" "cuaron1.jpg"]

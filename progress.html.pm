@@ -1,7 +1,7 @@
 #lang pollen
 
-◊span[#:class "mcqueen"]{progress}
-◊span[#:class "mcduke"]{07.23.17}
+◊red-title{progress}
+◊small-num{07.23.17}
 
 ◊(nobar)
 

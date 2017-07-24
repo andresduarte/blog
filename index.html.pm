@@ -1,74 +1,70 @@
 #lang pollen
 
-◊xref["apartments.html"]{◊red-title{apartments}}
-
 ◊red-title{july}
-  ◊margin-note{◊num{01}}
-  ◊xref["/july/edinburghi.html"]{Edinburgh I}
-  ◊margin-note{◊num{02}}
-  ◊xref["/july/edinburghii.html"]{Edinburgh II}
-  ◊margin-note{◊num{04}}
-  ◊xref["/july/edinburgh>york.html"]{Edinburgh > York}
-  ◊margin-note{◊num{05}}
-  ◊xref["/july/york.html"]{York}
-  ◊margin-note{◊num{06}}
-  ◊xref["/july/yorkii.html"]{York ii}
-  ◊margin-note{◊num{07}}
-  ◊xref["/july/rotterdam>amsterdam.html"]{Rotterdam > Amsterdam}
-  ◊margin-note{◊num{08}}
-  ◊xref["/july/amsterdam.html"]{Amsterdam}
-  ◊margin-note{◊num{09}}
-  ◊xref["/july/amsterdamii.html"]{Amsterdam ii}
-  ◊margin-note{◊num{10}}
-  ◊xref["/july/munster>cologne.html"]{Munster > Cologne}
-  ◊margin-note{◊num{11}}
-  ◊xref["/july/kassel.html"]{kassel}
-  ◊margin-note{◊num{12}}
-  ◊xref["/july/berlin.html"]{berlin}
-  ◊margin-note{◊num{13}}
-  ◊xref["/july/berlinii.html"]{berlin ii}
-  ◊margin-note{◊num{14}}
-  ◊xref["/july/prague.html"]{prague}
-  ◊margin-note{◊num{15}}
-  ◊xref["/july/pragueii.html"]{prague ii}
-  ◊margin-note{◊num{16}}
-  ◊xref["/july/barcelona.html"]{barcelona}
-  ◊margin-note{◊num{17}}
-  ◊xref["/july/barcelonaii.html"]{barcelona ii}
-  ◊margin-note{◊num{18}}
-  ◊xref["/july/barcelonaiii.html"]{barcelona iii}
+  ◊right-note{◊num{01}}
+  ◊xref["/july/01.html"]{Edinburgh I}
+  ◊right-note{◊num{02}}
+  ◊xref["/july/02.html"]{Edinburgh II}
+  ◊right-note{◊num{04}}
+  ◊xref["/july/04.html"]{Edinburgh > York}
+  ◊right-note{◊num{05}}
+  ◊xref["/july/05.html"]{York}
+  ◊right-note{◊num{06}}
+  ◊xref["/july/06.html"]{York ii}
+  ◊right-note{◊num{07}}
+  ◊xref["/july/07.html"]{Rotterdam > Amsterdam}
+  ◊right-note{◊num{08}}
+  ◊xref["/july/08.html"]{Amsterdam}
+  ◊right-note{◊num{09}}
+  ◊xref["/july/09.html"]{Amsterdam ii}
+  ◊right-note{◊num{10}}
+  ◊xref["/july/10.html"]{Munster > Cologne}
+  ◊right-note{◊num{11}}
+  ◊xref["/july/11.html"]{kassel}
+  ◊right-note{◊num{12}}
+  ◊xref["/july/12.html"]{berlin}
+  ◊right-note{◊num{13}}
+  ◊xref["/july/13.html"]{berlin ii}
+  ◊right-note{◊num{14}}
+  ◊xref["/july/14.html"]{prague}
+  ◊right-note{◊num{15}}
+  ◊xref["/july/15.html"]{prague ii}
+  ◊right-note{◊num{16}}
+  ◊xref["/july/16.html"]{barcelona}
+  ◊right-note{◊num{17}}
+  ◊xref["/july/17.html"]{barcelona ii}
+  ◊right-note{◊num{18}}
+  ◊xref["/july/18.html"]{barcelona iii}
 
 ◊red-title{june}
-  ◊margin-note{◊num{01}}
-  ◊xref["/june/order.html"]{Order}
-  ◊margin-note{◊num{15}}
-  ◊xref["/june/color.html"]{Colour}
-  ◊margin-note{◊num{15}}
-  ◊xref["/june/vera-verto.html"]{Vera Verto}
-  ◊margin-note{◊num{18}}
-  ◊xref["/june/happiness.html"]{Happiness}
-  ◊margin-note{◊num{19}}
-  ◊xref["/june/london.html"]{London I}
-  ◊margin-note{◊num{20}}
-  ◊xref["/june/londonii.html"]{London II}
-  ◊margin-note{◊num{21}}
-  ◊xref["/june/londoniii.html"]{London III}
-  ◊margin-note{◊num{22}}
-  ◊xref["/june/londoniv.html"]{London IV}
-  ◊margin-note{◊num{23}}
-  ◊xref["/june/londonv.html"]{London V}
-  ◊margin-note{◊num{24}}
-  ◊xref["/june/londonvi.html"]{London VI}
-  ◊margin-note{◊num{25}}
-  ◊xref["/june/londonvii.html"]{London VII}
-  ◊margin-note{◊num{26}}
-  ◊xref["/june/stonehenge.html"]{Stonehenge}
-  ◊margin-note{◊num{27}}
-  ◊xref["/june/londonviii.html"]{london VII}
-  ◊margin-note{◊num{29}}
-  ◊xref["/june/windsor.html"]{windsor}
-  ◊margin-note{◊num{30}}
-  ◊xref["/june/liverpool.html"]{Liverpool}
+  ◊right-note{◊num{01}}
+  ◊xref["/june/01.html"]{Order}
+  ◊right-note{◊num{15}}
+  ◊xref["/june/15.html"]{Colour}
+  ◊right-note{◊num{18}}
+  ◊xref["/june/18.html"]{Happiness}
+  ◊right-note{◊num{19}}
+  ◊xref["/june/19.html"]{London I}
+  ◊right-note{◊num{20}}
+  ◊xref["/june/20.html"]{London II}
+  ◊right-note{◊num{21}}
+  ◊xref["/june/21.html"]{London III}
+  ◊right-note{◊num{22}}
+  ◊xref["/june/22.html"]{London IV}
+  ◊right-note{◊num{23}}
+  ◊xref["/june/23.html"]{London V}
+  ◊right-note{◊num{24}}
+  ◊xref["/june/24.html"]{London VI}
+  ◊right-note{◊num{25}}
+  ◊xref["/june/25.html"]{London VII}
+  ◊right-note{◊num{26}}
+  ◊xref["/june/26.html"]{Stonehenge}
+  ◊right-note{◊num{27}}
+  ◊xref["/june/27.html"]{london VII}
+  ◊right-note{◊num{29}}
+  ◊xref["/june/29.html"]{windsor}
+  ◊right-note{◊num{30}}
+  ◊xref["/june/30.html"]{Liverpool}
 
 
 ◊xref["/documentation.html"]{◊red-title{documentation}}
