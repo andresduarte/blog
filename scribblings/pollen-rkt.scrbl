@@ -926,6 +926,10 @@ Presented without docs or comment, as it should be obvious at this point what th
 
        (define green (default-tag-function 'span #:class "green"))
 
+       (define orange (default-tag-function 'span #:class "orange"))
+
+       (define yellow (default-tag-function 'span #:class "yellow"))
+
        (define blue (default-tag-function 'span #:class "blue"))
 
        (define red (default-tag-function 'span #:class "red"))

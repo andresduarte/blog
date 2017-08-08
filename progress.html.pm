@@ -7,7 +7,10 @@
 
 ◊;---------- START
 
-◊right-note{Implemented using ◊strong{default-tag-function}}
+◊right-note{
+  Implemented using ◊strong{default-tag-function}.
+  ◊small-num{◊green{07.17}}
+}
 
 ◊left-note{◊green{●}}
 green
@@ -20,7 +23,10 @@ blue
 
 ◊(orange-line)
 
-◊right-note{Implemented using existing ◊strong{margin-note}}
+◊right-note{
+  Implemented using existing ◊strong{margin-note}.
+  ◊small-num{◊green{07.17}}
+}
 
 ◊left-note{◊green{●}}
 left-note
@@ -29,3 +35,8 @@ left-note
 right-note
 
 ◊(orange-line)
+
+◊right-note{No progress.}
+
+◊left-note{◊red{●}}
+Indentation

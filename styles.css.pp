@@ -550,6 +550,14 @@ font-size: 95%;
   color: #60C655;
 }
 
+.yellow {
+  color: #F6BF4F;
+}
+
+.orange {
+  color: #DC702E;
+}
+
 .blue {
   color: #3481F2;
 }
@@ -901,6 +909,17 @@ div.pdf-thumbnail.centurion {
   ◊(make-css-small-caps)
   padding-bottom: 2rem;
   margin-bottom: 2rem;
+}
+
+.divisor {
+  font-family: "Latin Modern Roman";
+  border-right: 1px black solid;
+  border-radius: 0px 0px 10px 0px
+}
+
+.dividend {
+  font-family: "Latin Modern Roman";
+  border-top: 1px black solid;
 }
 
 .mcprincess {

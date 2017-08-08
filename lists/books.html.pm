@@ -8,7 +8,6 @@
 ◊;---------- START
 
 ◊bulleted-list{
-  ◊right-note{◊green{done} ◊num{07.17}}
-  ◊left-note{◊num{◊red{10}}}
+  ◊right-note{◊green{done} ◊small-num{07.17}}
   Happiness
 }

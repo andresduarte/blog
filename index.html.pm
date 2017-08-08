@@ -35,6 +35,8 @@
   ◊xref["/july/17.html"]{barcelona ii}
   ◊right-note{◊num{18}}
   ◊xref["/july/18.html"]{barcelona iii}
+  ◊right-note{◊num{25}}
+  ◊xref["/july/25.html"]{Mathematics}
 
 ◊red-title{june}
   ◊right-note{◊num{01}}
@@ -75,6 +77,10 @@
   ◊xref["/mathematics/basics.html"]{basics}
   ◊xref["/mathematics/history.html"]{history}
   ◊xref["/mathematics/areas-of-study.html"]{areas of study}
+  ◊xref["/mathematics/arithmetic.html"]{arithmetic}
+  ◊xref["/mathematics/pre-algebra.html"]{pre-algebra}
+
+
 
 ◊red-title{formal system}
   ◊xref["/mathematics/formal-system/intro.html"]{intro}
@@ -93,4 +99,11 @@
   ◊xref["/pain/01.html"]{01}
 
 ◊red-title{lists}
-  ◊xref["/lists/books.html"]{Bookshelf}
+  ◊xref["/lists/books.html"]{books}
+  ◊xref["/lists/articles.html"]{articles}
+  ◊xref["/lists/pokemon.html"]{pokemon}
+
+◊red-title{Berkeley}
+  ◊xref["/berkeley/cs-major.html"]{cs major}
+  ◊xref["/berkeley/math-minor.html"]{math minor}
+  ◊xref["/berkeley/moving-in.html"]{moving in}

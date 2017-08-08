@@ -7,6 +7,12 @@
 
 ◊;---------- START
 
+◊section{Notes}
+
+◊bullet-list{
+  Her name is Grace.
+}
+
 ◊span[#:class "mcprincess"]{
   FADE IN
 
