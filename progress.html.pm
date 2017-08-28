@@ -36,7 +36,48 @@ right-note
 
 ◊(orange-line)
 
-◊right-note{No progress.}
+◊right-note{Had already been implemented}
+◊left-note{◊green{●}}
+Indented
+
+◊(nobar)
+◊(orange-line)
+
+◊right-note{
+  Same image tag just add:
+  ◊highlight['racket]{#:border #f}
+ }
+◊left-note{◊green{●}}
+image with no border.
+
+
+◊(nobar)◊(nobar)◊(nobar)◊(nobar)
+◊(orange-line)
 
 ◊left-note{◊red{●}}
-Indentation
+◊right-note{No progress.}
+Image tag that allows me to display multiple images on the same line without unexpected ehavior.
+
+◊(orange-line)
+
+
+◊bullet-list{
+  ◊right-note{8.12.17}
+  Fixed highlight text spilling over.
+
+
+  ◊right-note{8.12.17}
+  Discovered that by default the image class includes a ◊strong{bordered} class but it can be removed.
+
+  ◊right-note{Bordered}
+  ◊highlight['racket]{
+      ∆image[#:width "80%" "line.png"]
+  }
+
+  ◊right-note{Borderless}
+  ◊highlight['racket]{
+      ∆image[#:width "80%" "line.png" #:border #f]
+  }
+
+
+}

@@ -926,6 +926,8 @@ Presented without docs or comment, as it should be obvious at this point what th
 
        (define green (default-tag-function 'span #:class "green"))
 
+       (define purple (default-tag-function 'span #:class "purple"))
+
        (define orange (default-tag-function 'span #:class "orange"))
 
        (define yellow (default-tag-function 'span #:class "yellow"))
@@ -934,9 +936,13 @@ Presented without docs or comment, as it should be obvious at this point what th
 
        (define red (default-tag-function 'span #:class "red"))
 
+       (define line-through (default-tag-function 'span #:class "line-through"))
+
        (define all-caps (default-tag-function 'span #:class "all-caps"))
 
        (define red-title (default-tag-function 'span #:class "red-title"))
+
+       (define spotlight (default-tag-function 'span #:class "spotlight"))
 
        (define num (default-tag-function 'span #:class "num"))
 
@@ -947,6 +953,8 @@ Presented without docs or comment, as it should be obvious at this point what th
        (define midbar (default-tag-function 'div #:class "midbar"))
 
        (define mono (default-tag-function 'span #:class "mono"))
+
+       (define red-light (default-tag-function 'span #:class "red-light"))
 
        (define font-details (default-tag-function 'div #:class "font-details"))
 

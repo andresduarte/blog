@@ -290,7 +290,7 @@ margin-right: ◊|default-margin|;
 
 #doc {
   font-family: "source sans pro";
-  color: #222; ◊; Added this color, unsure about it's effect.
+  color: #484848; ◊; Added this color, unsure about it's effect.
 }
 
 em {
@@ -467,7 +467,7 @@ ul li {
 
 div#doc ul li:before {
   font-family: "source code pro";
-  content: "•";
+  content: "○";
   float:left;
   margin-left: -2.5rem;
   margin-top: 0.1rem;
@@ -536,6 +536,13 @@ font-size: 95%;
 
 .mono {
   font-family: "Source Code Pro"; ◊; Modified font.
+  background-color: #F2F7FC;
+  font-size: 80%;
+}
+
+.red-light {
+  background-color: #fff4f7;
+  font-size: 80%;
 }
 
 .glyph:before {
@@ -548,6 +555,10 @@ font-size: 95%;
 
 .green {
   color: #60C655;
+}
+
+.purple {
+  color: #C179DB;
 }
 
 .yellow {
@@ -620,7 +631,6 @@ td {
 
 th {
   font-family: "Source Sans Pro"; ◊; Modified font, effect in doubt.
-  font-weight: normal;
   text-transform: lowercase;
   font-size: 85%;
   padding: 0.3rem 0.5rem 0.3rem 0.5rem;
@@ -885,8 +895,17 @@ div.pdf-thumbnail.centurion {
   color: #fff;
 }
 
+.spotlight:before {
+  font-family: 'Source Code Pro'
+}
+
+
 .all-caps {
   text-transform: uppercase;
+}
+
+.line-through{
+  text-decoration: line-through;
 }
 
 .mcking {
@@ -1046,7 +1065,6 @@ a.pdf img:hover {
     text-align: left;
     font-family: Source Code Pro;
     font-size: 0.75rem;
-    margin-right: -2rem;
     white-space: pre-wrap;
 }
 ◊; FADE : Styles code blocks.

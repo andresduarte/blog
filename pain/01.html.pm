@@ -11,12 +11,7 @@
 
 ◊bullet-list{
   Her name is Grace.
-}
-
-◊span[#:class "mcprincess"]{
-  FADE IN
-
-  INT. TERENCE'S LIVING ROOM
 
 
+  ◊image[#:width "50%" #:border #f "grace-hartzel.png"]
 }

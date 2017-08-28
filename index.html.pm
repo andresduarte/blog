@@ -1,5 +1,11 @@
 #lang pollen
 
+◊xref["/personal/today.html"]{◊red-title{today}}
+
+◊red-title{august}
+  ◊right-note{◊num{12}}
+  ◊xref["/august/12.html"]{Westward}
+
 ◊red-title{july}
   ◊right-note{◊num{01}}
   ◊xref["/july/01.html"]{Edinburgh I}
@@ -107,3 +113,18 @@
   ◊xref["/berkeley/cs-major.html"]{cs major}
   ◊xref["/berkeley/math-minor.html"]{math minor}
   ◊xref["/berkeley/moving-in.html"]{moving in}
+
+
+◊red-title{CS 61A}
+  ◊xref["/cs61a/preview.html"]{preview}
+  ◊xref["/cs61a/chapter-1.html"]{chapter 1}
+
+
+◊red-title{Math 1B}
+  ◊xref["/math1b/misc.html"]{Miscellaneous}
+  ◊xref["/math1b/chapter-2.html"]{Chapter 2}
+  ◊xref["/math1b/chapter-7.html"]{Chapter 7}
+
+
+◊red-title{EE 16A}
+  ◊xref["/ee16a/section-1.html"]{Section 1}

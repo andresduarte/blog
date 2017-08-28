@@ -44,7 +44,7 @@
     multiply shared common factors.
     ◊left-note{e.g.}
     ◊right-note{20 is the greastest common factor of 40 and 60}
-    ◊$${2 \times 2  \times 5 = 20 \quad 2 \times 2 \times 5 = 20}
+    ◊$${2 \times 2  \times 5 = 20}
   }
 
 
@@ -69,6 +69,7 @@
 
     ◊left-note{◊num{6}}
     If divisible by 2 and 3.
+
 
     ◊left-note{◊num{9}}
     If sum of all digits is divisible by 9.
@@ -142,9 +143,17 @@
     Describes the middle 50% of values when ordered from left to right.
 
 
-    Equivalent to the difference between 75th and 25th percentiles.
+    Equivalent to the difference between Q3 and Q1.
   }
 
+
+◊section{Lower Half}
+
+  Set of all values smaller than median value.
+
+◊section{Upper Half}
+
+  Set of all values larger than median value.
 
 ◊section{First Quartile}
 
@@ -185,22 +194,31 @@
   Plane shape with at least three straight sides and angles.
 
 
+◊right-note{
+  ◊image[#:width "80%" "line.png" #:border #f]
+  ◊image[#:width "80%" "square.png" #:border #f]
+  ◊image[#:width "80%" "cube.png" #:border #f]
+}
 ◊section{Length}
 
-  ◊left-note{1D}
-  ◊right-note{
-    ◊image[#:width "80%" "line.png"]
-    ◊image[#:width "80%" "square.png"]
-    ◊image[#:width "80%" "cube.png"]
-  }
+  ◊left-note{units}
   Describes amount of space in one dimension.
 
 ◊section{Area}
 
-  ◊left-note{2D}
+  ◊left-note{units²}
   Describes amount of space in two dimensions.
 
 ◊section{Volume}
 
-  ◊left-note{3D}
+  ◊left-note{units³}
   Describes amount of space in three dimesions.
+
+
+◊section{Proportion}
+
+To set up a proportion write two ratios and set them equal to each other.
+
+◊section{Proportional Relationships}
+
+When two sets of numbers always have the same ratio between each other. 

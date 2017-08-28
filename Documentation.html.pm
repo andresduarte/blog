@@ -310,3 +310,11 @@ middle
 }
 
 ◊(orange-line)
+
+◊indented{Hello to everyone, to all my friends, my enemies. the living the unliving. everyone.}
+
+◊highlight['racket]{
+∆indented{Hello to everyone, to all my friends, my enemies. the living the unliving. everyone.}}
+
+
+◊(lorem)

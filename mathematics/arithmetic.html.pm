@@ -45,5 +45,3 @@
     ◊$${\frac{4}{64}}
 
   }
-
-  Hola como estas
