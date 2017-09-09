@@ -541,6 +541,7 @@ font-size: 95%;
 }
 
 .red-light {
+  font-family: "Source Code Pro";
   background-color: #fff4f7;
   font-size: 80%;
 }

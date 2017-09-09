@@ -118,6 +118,8 @@
 ◊red-title{CS 61A}
   ◊xref["/cs61a/preview.html"]{preview}
   ◊xref["/cs61a/chapter-1.html"]{chapter 1}
+  ◊xref["/cs61a/lecture-2.html"]{lecture 2}
+
 
 
 ◊red-title{Math 1B}

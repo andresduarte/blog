@@ -437,6 +437,262 @@
 ◊(nobar) ◊(nobar) ◊(nobar) ◊(nobar)
 
   ◊left-note{◊blue{4}}
-  ◊right-note{}
+  ◊right-note{◊${y = tan^{-1}x} has two horizontal asymptotes}
 
   ◊$${\lim_{x \to -\infty} tan^{-1}x = - \frac{\pi}{2} \quad \lim_{x \to \infty} tan^{-1}x = \frac{\pi}{2}}
+
+◊(nobar) ◊(nobar) ◊(nobar) ◊(nobar)
+
+  ◊left-note{◊blue{Theorem 5}}
+  ◊right-note{}
+
+  If ◊${r > 0} is a rational number, then
+
+  ◊$${\lim_{x \to \infty} \frac{1}{x^r} = 0}
+
+  If ◊${r > 0} is a rational number such that ◊${x^r} is defined for all ◊${x}, then
+
+  ◊$${\lim_{x \to -\infty} \frac{1}{x^r} = 0}
+
+◊(nobar) ◊(nobar) ◊(nobar) ◊(nobar)
+
+  ◊left-note{◊blue{case: rational function}}
+
+
+  To evaluate the limit at infinity of any rational function, first divide both numerator and denominator by the highest power of ◊${x} that occurs in the denominator.
+
+  ◊$${
+    \lim_{x \to \infty} \frac{3x^2 - x - 2}{5x^2 + 4x +1} = \lim_{x \to \infty} \frac{\frac{3x^2 - x -2}{x^2}}{\frac{5x^2 + 4x +1}{x^2}} = \lim_{x \to \infty} \frac{3 - \frac{1}{x} - \frac{2}{x^2}}{5 + \frac{4}{x} + \frac{1}{x^2}}
+  }
+
+  ◊$${
+    = \frac{\lim_{x \to \infty} (3 - \frac{1}{x} - \frac{2}{x^2})}{\lim_{x \to \infty} (5 + \frac{4}{x} + \frac{1}{x^2})}
+  }
+
+  ◊$${
+    = \frac{\lim_{x \to \infty} 3 = \lim_{x \to \infty} \frac{1}{x} - \lim_{x \to \infty} \frac{1}{x^2}}{\lim_{x \to \infty} 5 + 4 \lim_{x \to \infty} \frac{1}{x} + \lim_{x \to \infty} \frac{1}{x^2}}
+  }
+
+  ◊$${
+    = \frac{3 - 0 - 0}{5 + 0 +0}
+  }
+
+  ◊$${= \frac{3}{5}}
+
+◊(nobar) ◊(nobar) ◊(nobar) ◊(nobar)
+
+  ◊left-note{◊mono{Conjugate}}
+
+  When we change the sign of a binomial.
+
+  ◊$${a + b \wedge a - b = conjugates}
+
+  The product of conjugates is always ◊${a^2 - b^2}
+
+◊(nobar) ◊(nobar) ◊(nobar) ◊(nobar)
+
+  ◊left-note{◊blue{6}}
+  ◊right-note{◊orange{limit laws can't be applied to infinite limits because ◊${\infty} is not a number}}
+
+  ◊$${\lim_{x \to \infty} e^x = 0}
+
+◊(nobar) ◊(nobar) ◊(nobar) ◊(nobar)
+
+  ◊left-note{◊blue{Limit at Infinity}}
+
+  ◊$${\lim_{x \to \infty} f(x) = L}
+
+  means that for every ◊${\epsilon > 0} there is a corresponding ◊${N} such that
+
+  ◊$${\text{if}\ x > N\ \text{then}\ |f(x) - L| < \epsilon}
+
+◊(nobar) ◊(nobar) ◊(nobar) ◊(nobar)
+
+  ◊left-note{◊blue{Limit at - Infinity}}
+
+  ◊$${\lim_{x \to -\infty} f(x) = L}
+
+  means that for every ◊${\epsilon > 0} there is a corresponding ◊${N} such that
+
+  ◊$${\text{if}\ x < N\ \text{then}\ |f(x) - L| < \epsilon}
+
+◊(nobar) ◊(nobar) ◊(nobar) ◊(nobar)
+
+  ◊left-note{◊blue{Infinite Limit at Infinity}}
+
+  ◊$${\lim_{x \to \infty} f(x) = \infty}
+
+  means that for every ◊${M > 0} there is a corresponding ◊${N > 0} such that
+
+  ◊$${\text{if}\ x > N\ \text{then}\ f(x) > M}
+
+◊(nobar) ◊(nobar) ◊(nobar) ◊(nobar)
+
+    ◊(orange-line)
+    ◊left-note{◊red{◊small-num{3.1}}}
+    ◊red-title{Derivatives of Polynomials and Exponential Functions}
+
+◊(nobar) ◊(nobar) ◊(nobar) ◊(nobar)
+
+  ◊left-note{◊blue{Derivative of a Constant Function}}
+
+  ◊$${\frac{d}{dx}(c) = 0}
+
+◊(nobar) ◊(nobar) ◊(nobar) ◊(nobar)
+
+  ◊left-note{◊blue{Power Rule}}
+
+  if ◊${n \in \mathbb{R}}
+
+  ◊$${\frac{d}{dx}(x^n) = nx^{n-1}}
+
+◊(nobar) ◊(nobar) ◊(nobar) ◊(nobar)
+
+  ◊left-note{◊blue{The Constant Multiple Rule}}
+
+  if ◊${c} is constant and ◊${f} is a differentiable function, then
+
+  ◊$${\frac{d}{dx}(cf(x)) = c \frac{d}{dx}f(x)}
+
+◊(nobar) ◊(nobar) ◊(nobar) ◊(nobar)
+
+  ◊left-note{◊blue{Sum Rule}}
+
+  if ◊${f} and ◊${g} are both differentiable, then
+
+  ◊$${\frac{d}{dx}[f(x)+g(x)] = \frac{d}{dx}f(x) + \frac{d}{dx}g(x)}
+
+◊(nobar) ◊(nobar) ◊(nobar) ◊(nobar)
+
+  ◊left-note{◊blue{Difference Rule}}
+
+  if ◊${f} and ◊${g} are both differentiable, then
+
+  ◊$${\frac{d}{dx}[f(x)-g(x)] = \frac{d}{dx}f(x) - \frac{d}{dx}g(x)}
+
+◊(nobar) ◊(nobar) ◊(nobar) ◊(nobar)
+
+  ◊left-note{◊blue{Derivative ◊${e^x}}}
+
+  ◊$${\frac{d}{dx}(e^x)=e^x}
+
+◊(nobar) ◊(nobar) ◊(nobar) ◊(nobar)
+
+  ◊left-note{◊blue{Product Rule}}
+
+  if ◊${f} and ◊${g} are both differentiable, then
+
+  ◊$${\frac{d}{dx}[f(x)g(x)] = f(x) \frac{d}{dx}[g(x)] + g(x) \frac{d}{dx}[f(x)]}
+
+◊(nobar) ◊(nobar) ◊(nobar) ◊(nobar)
+
+  ◊left-note{◊blue{Quotient Rule}}
+
+  if ◊${f} and ◊${g} are both differentiable, then
+
+  ◊$${\frac{d}{dx} \left [\frac{f(x)}{g(x)} \right] = \frac{g(x) \frac{d}{dx}[f(x)] + f(x) \frac{d}{dx}[g(x)]}{[g(x)]^2}}
+
+◊(nobar) ◊(nobar) ◊(nobar) ◊(nobar)
+
+  ◊left-note{◊blue{Table of Differentiation Formulas}}
+
+  ◊bullet-list{
+    ◊${\frac{d}{dx}(c) = 0}
+
+
+    ◊${\frac{d}{dx}(x^n) = nx^{n-1}}
+
+
+    ◊${\frac{d}{dx}(e^x) = e^x}
+
+
+    ◊${(cf)' = cf'}
+
+
+    ◊${(f + g)' = f' + g'}
+
+
+    ◊${(f - g)' = f' - g'}
+
+
+    ◊${(fg)' = fg' - gf'}
+
+
+    ◊${(\frac{f}{g})' = \frac{gf' - fg'}{g^2}}
+  }
+
+
+◊(nobar) ◊(nobar) ◊(nobar) ◊(nobar)
+
+    ◊(orange-line)
+    ◊left-note{◊red{◊small-num{3.3}}}
+    ◊red-title{Derivatives of trigonometric Functions}
+
+◊(nobar) ◊(nobar) ◊(nobar) ◊(nobar)
+
+  ◊left-note{◊blue{2}}
+
+  ◊$${\lim_{x \to 0} \frac{sin \theta}{\theta} = 1}
+
+◊(nobar) ◊(nobar) ◊(nobar) ◊(nobar)
+
+  ◊left-note{◊blue{Derivative Trig Functions}}
+
+  ◊bullet-list{
+    ◊${\frac{d}{dx}(sin x) = cos x}
+
+
+    ◊${\frac{d}{dx}(cos x) = - sin x}
+
+
+    ◊${\frac{d}{dx}(tan x) = sec^2x}
+
+
+    ◊${\frac{d}{dx}(csc x) = - csc x cot x}
+
+
+    ◊${\frac{d}{dx}(sec x) = sec x tan x}
+
+
+    ◊${\frac{d}{dx}(cot x) = - csc^2x}
+
+  }
+
+◊(nobar) ◊(nobar) ◊(nobar) ◊(nobar)
+
+  ◊(orange-line)
+  ◊left-note{◊red{◊small-num{3.4}}}
+  ◊red-title{Chain Rule}
+
+◊(nobar) ◊(nobar) ◊(nobar) ◊(nobar)
+
+  ◊left-note{◊blue{Chain Rule}}
+
+  If ◊${g} is differentiable at ◊${x} and ◊${f} is differentiable at ◊${g(x)} then the composite function ◊${F = f \circ g} defined by ◊${F(x) = f(g(x))} is differentiable at x and ◊${F'} is given by the product
+
+  ◊$${F'(x) = f'(g(x)) \cdot g'(x)}
+
+◊(nobar) ◊(nobar) ◊(nobar) ◊(nobar)
+
+  ◊left-note{◊blue{Chain Rule + Power Rule}}
+
+  ◊$${\frac{d}{dx}[g(x)]^n = n[g(x)]^{n-1} \cdot g'(x)}
+
+
+◊(nobar) ◊(nobar) ◊(nobar) ◊(nobar)
+
+  ◊left-note{◊blue{5}}
+
+  ◊${\frac{d}{dx}(b^x) = b^x ln b}
+
+◊(nobar) ◊(nobar) ◊(nobar) ◊(nobar)
+
+  ◊(orange-line)
+  ◊left-note{◊red{◊small-num{3.5}}}
+  ◊red-title{Implicit Differentiation}
+
+◊(nobar) ◊(nobar) ◊(nobar) ◊(nobar)
+
+  ◊left-note{◊blue{Chain Rule}}
+
+  
