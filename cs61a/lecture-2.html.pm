@@ -1,29 +1,27 @@
 #lang pollen
 
-◊red-title{Lecture 2}
-◊small-num{09.3.17}
-
-◊(nobar)
-
 ◊;---------- START
 
 ◊(orange-line)
+◊left-note{◊small-num{◊red{◊num{2}}}}
+◊right-note{◊num{◊blue{9.03.17}}}
+◊red-title{Lecture}
 
-◊left-note{
-  ◊mono{<Control>-L}
-}
-Clears terminal screen.
-
-◊left-note{
-  ◊mono{
-    import
-    =
-    def
+  ◊left-note{
+    ◊mono{<Control>-L}
   }
-}
-Function names for common infix operators live in ◊mono{operator module}.
+  Clears terminal screen.
 
-◊strong{binding names to values}
+  ◊left-note{
+    ◊mono{
+      import
+      =
+      def
+    }
+  }
+  Function names for common infix operators live in ◊mono{operator module}.
+
+  ◊strong{binding names to values}
   ◊bullet-list{
     Import statement
 
@@ -36,17 +34,17 @@ Function names for common infix operators live in ◊mono{operator module}.
 
   Functions differ from names in that its return expression gets re-evaluated every time it's called.
 
-◊strong{Environment Diagrams}
+  ◊strong{Environment Diagrams}
 
   Memory that keeps track of the bindings between names and values.
 
   Environment diagrams visualize the interpreter's process.
 
-◊strong{Frame}
-  Each name is bound to a value
-  within a frame, a name cannot be repeated
+  ◊strong{Frame}
+    Each name is bound to a value
+    within a frame, a name cannot be repeated
 
-◊strong{Execution Procedure for assignment statements}
+  ◊strong{Execution Procedure for assignment statements}
   ◊bullet-list{
     Evaluate all expressions to the right of ◊mono{=} from left to right.
 
@@ -54,7 +52,7 @@ Function names for common infix operators live in ◊mono{operator module}.
     Bind all names to the left of ◊mono{=} to the resulting values in the current frame.
   }
 
-◊strong{Defining Functions}
+  ◊strong{Defining Functions}
   Assignment is a simple means of abstraction: binds names to values.
 
   Function definition is a more powerful means of abstraction: binds names to ◊em{expressions}
@@ -68,7 +66,7 @@ Function names for common infix operators live in ◊mono{operator module}.
 
   Function ◊strong{body} defines the computational process expressed by a function.
 
-◊strong{Execution Procedure for def statements}
+  ◊strong{Execution Procedure for def statements}
   ◊bullet-list{
     Create a function with signature ◊mono{<name>(<formal parameters>)}
 
@@ -79,9 +77,9 @@ Function names for common infix operators live in ◊mono{operator module}.
     Bind ◊mono{<name>} to that function in the current frame.
   }
 
-Function won't get executed until its called.
+  Function won't get executed until its called.
 
-◊strong{Procedure for calling/applying user-defined functions}
+  ◊strong{Procedure for calling/applying user-defined functions}
   ◊bullet-list{
     Add a local frame, forming a new enviroment
 
@@ -656,3 +654,133 @@ Function won't get executed until its called.
 
   ◊right-note{greek letter for ◊em{lambda}}
   In an enviroment diagram the functions created using lambda are referred to as ◊${\lambda}
+
+◊(orange-line)
+◊left-note{◊small-num{◊red{◊num{6}}}}
+◊right-note{◊num{◊blue{09.09.17}}}
+◊red-title{Lecture}
+
+  ◊left-note{◊orange{●}}
+  ◊strong{Recursive Function}
+
+  Function that calls itself, either directly or indirectly. To execute their body recursive functions often apply themselves.
+
+  ◊strong{Structure}
+
+  ◊bullet-list{
+    Standard ◊mono{def} statement.
+
+
+    Conditional statement checks for ◊strong{base cases}.
+
+
+    Bases cases are evaluated ◊em{without} recursive calls.
+
+
+    Recursive cases are evaluated ◊em{with} recursive calls.
+
+
+    Each recursive call solves a simpler problem than the last.
+  }
+  ◊strong{Example}
+
+  ◊right-note{recursive implementation of ◊em{factorial}}
+  ◊highlight['python]{
+    def fact(n):
+      if n == 0:
+        return 1
+      else:
+        return n * fact(n-1)
+  }
+
+  ◊strong{Iteration vs Recursion}
+  ◊bullet-list{
+  Iteration is a special case of recursion
+
+
+  Interation uses variables to keep track of computation. Recursion uses frames.
+  }
+
+  ◊strong{Verifying Recursive Function}
+  ◊bullet-list{
+    Verify base case.
+
+
+    Don't get caught up on implementation, instead focus on ◊em{correct behavior}.
+
+
+    In order to verify that ◊mono{func(n)} is correct, assume ◊mono{func(n-1)} is correct
+  }
+
+  ◊left-note{◊orange{●}}
+  ◊strong{Mutual Recursion}
+  When two functions call each other. At least one of said functions must have a base case.
+
+
+  ◊strong{Luhn Algorithm}
+    ◊right-note{Used to verify credit card numbers}
+    ◊bullet-list{
+      From the rightmost digit, moving left double the value of every second digit; if product of this doubling operation is greater than 9, then sum the digits of the product.
+
+
+      Sum all the digits, the credit card number is valid if the ◊mono{Luhn sum} is a multiple of 10
+    }
+
+  ◊strong{Recursion to Iteration}
+    ◊bullet-list{
+      Figure out what state must be maintained by the interative function.
+
+
+      Look at what gets passed in to each recursive call, and what gets returned.
+    }
+
+  ◊strong{Converting Iteration to Recursion}
+    ◊bullet-list{
+      The state of an iteration can be passed as arguments
+
+
+      Iterative functions update via assignments. Recursive functions update using recursive calls.
+    }
+
+◊(orange-line)
+◊left-note{◊small-num{◊red{◊num{7}}}}
+◊right-note{◊num{◊blue{09.09.17}}}
+◊red-title{Lecture}
+
+  ◊strong{Order of Recursive Calls}
+
+  When you make a function call you have to wait for it to return before you can do anything else.
+
+  ◊bullet-list{
+    If two implementations are equally clear, then shorter is usually better.
+
+
+    When deciding how to implement something, think about which version you would like to read.
+  }
+
+  ◊left-note{◊orange{●}}
+  ◊strong{Tree Recursion}
+
+  Arises whenever executing the body of a recursive function makes more than one call to that function.
+
+  ◊strong{example}
+
+  ◊highlight['python]{
+    def fib(n):
+    if n == 0:
+      return 0
+    elif n == 1:
+      return 1
+    else:
+      return fibb(n-2) + fib(n-1)
+  }
+
+  Computational process of fib evolves into a tree structure.
+
+  ◊mono{@trace} is a decorator you get from ◊mono{from ucb import trace} you place it with an @ sign just before the function that you want to define. It changes the behavior of the function to print out when it gets called and when it returns.
+
+  The tree recursion process can ◊em{highly} repetitive.
+
+  ◊strong{Counting Partitions}
+
+  Recursive decomposition: finding simpler instances of the problem.

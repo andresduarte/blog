@@ -1,5 +1,11 @@
 #lang pollen
 
+◊xref["/ee16a/outline.html"]{◊red-title{ee16a outline}}
+◊xref["/ee16a/circuits_base.html"]{◊red-title{circuits base}}
+◊xref["/math1b/outline.html"]{◊red-title{math1b outline}}
+◊xref["/math1b/calculus_base.html"]{◊red-title{calculus base}}
+◊xref["/cs61a/scheme.html"]{◊red-title{Scheme}}
+
 ◊xref["/personal/today.html"]{◊red-title{today}}
 
 ◊red-title{august}
@@ -126,7 +132,11 @@
   ◊xref["/math1b/misc.html"]{Miscellaneous}
   ◊xref["/math1b/chapter-2.html"]{Chapter 2}
   ◊xref["/math1b/chapter-7.html"]{Chapter 7}
+  ◊xref["/math1b/outline.html"]{outline}
+
 
 
 ◊red-title{EE 16A}
   ◊xref["/ee16a/section-1.html"]{Section 1}
+  ◊xref["/ee16a/lectures.html"]{Lectures}
+  ◊xref["/ee16a/outline.html"]{outline}

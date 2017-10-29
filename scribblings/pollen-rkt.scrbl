@@ -936,11 +936,15 @@ Presented without docs or comment, as it should be obvious at this point what th
 
        (define red (default-tag-function 'span #:class "red"))
 
+       (define gray (default-tag-function 'span #:class "gray"))
+
        (define line-through (default-tag-function 'span #:class "line-through"))
 
        (define all-caps (default-tag-function 'span #:class "all-caps"))
 
        (define red-title (default-tag-function 'span #:class "red-title"))
+
+       (define black-title (default-tag-function 'span #:class "black-title"))
 
        (define spotlight (default-tag-function 'span #:class "spotlight"))
 
@@ -954,7 +958,13 @@ Presented without docs or comment, as it should be obvious at this point what th
 
        (define mono (default-tag-function 'span #:class "mono"))
 
+       (define code (default-tag-function 'span #:class "code"))
+
        (define red-light (default-tag-function 'span #:class "red-light"))
+
+       (define gray_wash (default-tag-function 'span #:class "gray_wash"))
+
+       (define yellow_wash (default-tag-function 'span #:class "yellow_wash"))
 
        (define font-details (default-tag-function 'div #:class "font-details"))
 

@@ -66,13 +66,14 @@ h1, .chapter {
 
 
 h2, .section {
-  font-family: 'Dosis';
+  font-family: 'Source Sans Pro';
   padding-bottom: 6px;
   margin-top: 2rem;
   margin-bottom: 0.8rem;
   font-size: 100%;
   line-height: 1.1;
   color: gray;
+
 }
 
 .home-image {
@@ -289,7 +290,8 @@ margin-right: ◊|default-margin|;
 }
 
 #doc {
-  font-family: "source sans pro";
+  ◊; change here to change font of whole doc.
+  font-family: "Alegreya";
   color: #484848; ◊; Added this color, unsure about it's effect.
 }
 
@@ -540,10 +542,23 @@ font-size: 95%;
   font-size: 80%;
 }
 
+.code {
+  font-family: "Source Code Pro"; ◊; Modified font.
+  font-size: 80%;
+}
+
 .red-light {
   font-family: "Source Code Pro";
   background-color: #fff4f7;
   font-size: 80%;
+}
+
+.gray_wash {
+  background-color: #F6F6F6;
+}
+
+.yellow_wash {
+  background-color: #FCEF85;
 }
 
 .glyph:before {
@@ -576,6 +591,10 @@ font-size: 95%;
 
 .red {
   color: #EE6B5F;
+}
+
+.gray {
+  color: #BBBBBB;;
 }
 
 .madlib {
@@ -886,13 +905,25 @@ div.pdf-thumbnail.centurion {
 }
 
 .red-title {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Alegreya';
   margin-bottom: 10px;
   color: #FF001F;
 }
 
 .red-title:hover {
   background-color: #FF001F;
+  color: #fff;
+}
+
+.black-title {
+  font-family: 'Alegreya';
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #483C45;
+}
+
+.black-title:hover {
+  background-color: #483C45;
   color: #fff;
 }
 
